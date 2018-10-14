@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>【北京二手车交易市场_北京二手车市场_个人二手车转让】-瓜子二手车直卖网</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.guazi.com/favicon.ico" media="screen">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <!-- head -->
+    <head>
+        <!-- 头部的nav -->
+        <div id="head1" class="clearfix">
+            <i class="head1-logo"></i>
+            <a class="head1-city"><i></i>北京</a>
+            <nav class="head1-nav1 clearfix">
+                <a>首页</a>
+                <a>我要买车</a>
+                <a>我要卖车</a>
+                <a>瓜子服务</a>
+                <a>瓜子金融</a>
+                <a>毛豆新车</a>
+            </nav>
+            <nav class="head1-nav2 clearfix">
+                <a><i></i>登录</a>
+                <span class="line"></span>
+                <a>400-069-7632</a>
+            </nav>
+        </div>
+        <!-- 头部的大背景的轮播 -->
+           <!-- Swiper -->
+        <div id="head2">
+             <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/banner1-1.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner1-2.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner1-3.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/banner1-4.jpg"/>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                </div>
+        </div>
+         <!--大轮播的JS -->
+        <script src="js/swiper.min.js"></script>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                autoplay:true,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                }, 
+            });
+            // document.querySelector("body::before").remove();
+        </script>
+        <!-- 头部的我要买卖车 -->
+        <div id="head3" class="clearfix">
+            <div class="head3-buyCar">
+                <div class="head3-h2">
+                    <a>我要买车<i></i></a>
+                    <p class="head3-search">
+                        <input type="text" value="搜索您想要的车" class="head3-searchinput" name="" value="" />
+                        <a></a>
+                    </p>
+                </div>
+                <div class="head3-classify">
+                    <ul class="head3-classify1">
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/dazhong.png"/>
+                                </i>
+                            大众</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/benz.png">
+                                </i>
+                            奔驰</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/bmw.png">
+                                </i>
+                            宝马</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/audi.png">
+                                </i>
+                            奥迪</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/buick.png">
+                                </i>
+                            别克</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i>
+                                    <img src="img/toyota.png">
+                                </i>
+                            丰田</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="head3-more"></i>更多</a>
+                        </li>
+                    </ul>
+                    <ul class="head3-classify2">
+                        <li>
+                            <a href="#">三万以下</a>
+                        </li>
+                        <li>
+                            <a href="#">3-5万</a>
+                        </li>
+                        <li>
+                            <a href="#">5-7万</a>
+                        </li>
+                        <li>
+                            <a href="#">7-9万</a>
+                        </li>
+                        <li>
+                            <a href="#">9-12万</a>
+                        </li>
+                        <li>
+                            <a href="#">12-16万</a>
+                        </li>
+                        <li>
+                            <a href="#">16-20万</a>
+                        </li>
+                    </ul>
+                    <ul class="head3-classify3">
+                        <li>
+                            <a href="#">超值</a>
+                        </li>
+                        <li>
+                            <a href="#">急售</a>
+                        </li>
+                        <li>
+                            <a href="#">练手车</a>
+                        </li>
+                        <li>
+                            <a href="#">准新车</a>
+                        </li>
+                        <li>
+                            <a href="#">严选车</a>
+                        </li>
+                        <li>
+                            <a href="#">SUV</a>
+                        </li>
+                        <li>
+                            <a href="#">MPV</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 这里的JS效果1.点击搜索框搜索框的背景会变成白色2.点击搜索框会出现搜索框的联想词 3.鼠标移入移出的时候搜索框的会出现和隐藏边框-->
+            <div class="head3-sellCar">
+                <div class="head3-h2 clearfix">
+                    <a>我要卖车<i></i></a>
+                    <p>已有 <span>50020044</span> 人提交申请</p>
+                </div>
+                <input type="text" name="" value="请输入你的手机号" class="head3-phoneinput">
+                <!-- 这里的JS效果1.点击搜索框的时候背景颜色变成白色2.鼠标划入划出的时候边框的出现和隐藏 -->
+                <div class="head3-btn clearfix">
+                    <button>我要买车</button>
+                    <button>免费估价</button>
+                </div>
+            </div>
+        </div>
+    </head>
+
+    <!-- content -->
+    <!-- 三个大块的内容 -->
+    <section id="wrap1">
+        <div class="wrap-content1">
+            <div class="content1-box1">
+                <h2>严选车</h2>
+                <p>限时出售 | 性价比高</p>
+            </div>
+            <div class="content1-box2 clearfix">
+                <div class="box2-1">
+                    <img src="img/2-1.jpg">
+                </div>
+                <div class="box2-2">
+                    <img src="img/2-2.png">
+                    <div class="box2-p">
+                         <p>选你所爱</p>
+                         <p>三年内准新车</p>
+                    </div>            
+                </div>
+                <div class="box2-3">
+                    <div class="box2-3-1">
+                        <img src="img/2-3.png">
+                        <div class="box2-p">
+                            <p>选你所爱</p>
+                            <p>三年内准新车</p>
+                        </div>
+                    </div>
+                    <div class="box2-3-2">
+                        <img src="img/2-4.png">
+                        <div class="box2-p">
+                            <p>选你所爱</p>
+                            <p>三年内准新车</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2-4">
+                    <img src="img/2-5.png">
+                </div>
+            </div>
+        </div>
+        <div class="wrap-content2">
+            <div class="content1-box1">
+                <h2>瓜子金融 </h2>
+                <p>几十款精选金融产品 | 最快30分钟完成审批 | 95%以上申请可通过 | 金融专员全程服务</p>
+            </div>
+            <div class="content1-box2 clearfix">
+                <div class="box2-1">
+                    <img src="img/3-1.png">
+                </div>
+                <div class="box2-2">
+                    <img src="img/3-2.png">
+                    <div class="box2-p">
+                            <p>每天只需几十元</p>
+                            <p>五年以内 练手车</p>
+                    </div>            
+                </div>
+                <div class="box2-3">
+                    <div class="box2-3-1">
+                        <img src="img/3-3.png">
+                        <div class="box2-p">
+                            <p>千元月供买好车</p>
+                            <p>5-10万 中产车</p>
+                        </div>
+                    </div>
+                    <div class="box2-3-2">
+                        <img src="img/3-4.png">
+                        <div class="box2-p">
+                            <p>五万首付高品质</p>
+                            <p>10-20万 热门车</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2-4">
+                    <img src="img/3-5.png">
+                </div>
+            </div>
+        </div>
+        <div class="wrap-content3">
+            <div class="content1-box1">
+                <h2>毛豆新车</h2>
+                <p>包购置税 | 送一年保险 | 一年后灵活购买 | 三年还款超低月供  </p>
+            </div>
+            <div class="content1-box2 clearfix">
+                <div class="box2-1">
+                    <img src="img/4-1.jpg">
+                </div>
+                <div class="box2-2">
+                    <img src="img/4-2.jpg">
+                    <div class="box2-p">
+                            <p>一万开新车</p>
+                            <p>质优价低</p>
+                    </div>            
+                </div>
+                <div class="box2-3">
+                    <div class="box2-3-1">
+                        <img src="img/4-3.jpg">
+                        <div class="box2-p">
+                            <p>大众专场</p>
+                            <p>国民好车</p>
+                        </div>
+                    </div>
+                    <div class="box2-3-2">
+                        <img src="img/4-4.jpg">
+                        <div class="box2-p">
+                            <p>月供2000起</p>
+                            <p>分期无忧负担小</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box2-4">
+                    <img src="img/4-5.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 距离尾部的轮播 -->
+    <section id="wrap2">
+        <div class="wrap2-buyCar">
+            <div class="buyCarShow">
+                <ul>
+                    <li>
+                        <div>
+                            <span>预约看车</span>
+                            <p>拨打400-069-6530或在线预约</p>
+                        </div>
+                        <img src="img/banner5-1.jpg">
+                    </li>
+                    <li>
+                        <div>
+                            <span>专人带看</span>
+                            <p>瓜子将安排售车顾问陪同您看车</p>
+                        </div>
+                        <img src="img/banner5-2.jpg">
+                    </li>
+                    <li>
+                        <div>
+                            <span>签署合同</span>
+                            <p>签署三方合同（买家、卖家、瓜子二手车），支付定金</p>
+                        </div>
+                        <img src="img/banner5-3.jpg">
+                    </li>
+                    <li>
+                        <div>
+                            <span>交易过户</span>
+                            <p>协议过户，支付车款，好车开回家</p>
+                        </div>
+                        <img src="img/banner5-4.jpg"> 
+                    </li>
+                    <li>
+                        <div>
+                            <span>预约看车</span>
+                            <p>拨打400-069-6530或在线预约</p>
+                        </div>
+                        <img src="img/banner5-1.jpg">
+                    </li>
+                </ul>   
+            </div>
+            <!-- 买车的四个流程 -->
+            <div class="wrap2-buyCarList clearfix">
+                <button>
+                    <i></i>
+                    <p>预约看车</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>专人带看</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>签署合同</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>交易过户</p>
+                </button>
+            </div>
+        </div>
+        <script src="js/banner1.js"></script>
+        <!-- <div class="wrap2-icon2"> -->
+            <!-- 买车和买车的两个按钮 -->
+            <!-- <div class="wrap2-top clearfix">
+                <a href="" class="top-buy">买车流程</a> 
+                <span></span>
+                <a href="" class="top-sell">卖车流程</a>
+            </div> -->
+            
+            <!-- 卖车的四个流程 -->
+            <!-- <div class="wrap2-sellCarList active">
+                <button class="clearfix">
+                    <i></i>
+                    <p>在线预约</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>全网代售</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>三方约看</p>
+                </button>
+                <i class="right"></i>
+                <button>
+                    <i></i>
+                    <p>签约过户</p>
+                </button>
+            </div> -->
+        <!-- </div> -->
+        
+    </section>
+    <!-- footer -->
+    <footer>
+
+    </footer>
+</body>
+</html>

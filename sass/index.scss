@@ -1,0 +1,725 @@
+/* ---------------head------------------ */
+/* 头部的nav */
+#head1 {
+    width: 1200px;
+    height: 64px;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right:0;
+    margin: auto;
+  }
+  .head1-logo {
+    width: 64px;
+    height: 64px;
+    background: url(../img/script-head.png) no-repeat;
+    background-position: -181px -33px;
+    float: left;
+    display: block;
+  }
+  .head1-city {
+    display: block;
+    width: 44px;
+    height: 12px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 17px;
+    padding: 16px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #495056;
+    text-align: left;
+    i {
+      width: 11px;
+      height: 6px;
+      float: right;
+      background: url( ../img/script-head.png) no-repeat right;
+      background-position: -265px -35px;
+      margin-top: 3px;
+    }
+    &:hover {
+      color: #22ac38;
+      i {
+        background-position: -284px -35px;
+      }
+    }
+  }
+  .head1-nav1 {
+    width: 577px;
+    height: 61px;
+    float: left;
+    margin-left: 170px;
+    padding-bottom: 3px;
+    a {
+      float: left;
+      width: auto;
+      display: block;
+      font-size: 12px;
+      color: #333;
+      margin-right: 54px;
+      margin-top: 28px;
+      height: 32px;
+      &:first-child {
+        border-bottom: 3px solid #22ac38;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: #22ac38;
+      }
+    }
+  }
+  .head1-nav2 {
+    float: right;
+    width: 261px;
+    height: 64px;
+    a {
+      &:first-child {
+        display: block;
+        width: 46px;
+        height: 15px;
+        line-height: 15px;
+        padding: 28px 0 21px 0;
+        float: left;
+        font-size: 12px;
+        color: #495056;
+        text-align: right;
+        i {
+          width: 14px;
+          height: 15px;
+          background: url( ../img/script-head.png) no-repeat center 5px;
+          background-position: 0 -213px;
+          display: block;
+          float: left;
+        }
+        &:hover {
+          color: #22ac38;
+          i {
+            background-position: 0 -241px;
+          }
+        }
+      }
+      &:last-child {
+        float: left;
+        height: 18px;
+        line-height: 18px;
+        display: block;
+        font-size: 18px;
+        color: #22ac38;
+        font-weight: bold;
+        margin-top: 28px;
+      }
+    }
+    .line {
+      width: 1px;
+      height: 18px;
+      background: #8c898c;
+      margin: 28px 25px 0 20px;
+      float: left;
+    }
+  }
+  /* 头部的大背景的轮播 */
+  #head2 {
+    width: 100%;
+    height: 416px;
+    position: relative;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 416px;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    float: left;
+    width: auto;
+    height: 416px;
+    img {
+      width: 1920px;
+      height: 416px;
+    }
+  }
+  /* 头部的我要买卖车 */
+  #head3 {
+    width: 1103px;
+    height: 190px;
+    position: absolute;
+    top: 350px;
+    left: 0;
+    right:0;
+    margin: auto;
+    box-shadow: 0 2px 7px #e2e3e7;
+    z-index: 20;
+    border-radius: 5px;
+    background: #fff;
+    padding: 25px 49px 42px 48px;
+  }
+  .head3-buyCar {
+    width: 677px;
+    height: 190px;
+    float: left;
+    margin-right: 56px;
+    .head3-search {
+      width: 327px;
+      height: 46px;
+      position: relative;
+      left: 350px;
+    }
+    .head3-h2 {
+      .head3-searchinput {
+        outline: none;
+        border: 0;
+        font-size: 13px;
+        color: #acb4bd;
+        background: #f5f5f7;
+        width: 297px;
+        height: 46px;
+        border: 1px solid #e7e7e7;
+        border-radius: 23px;
+        position: absolute;
+        display: block;
+        right: 0;
+        padding-left: 30px;
+      }
+      a {
+        &:last-child {
+          display: block;
+          width: 18px;
+          height: 18px;
+          background: url( ../img/script-head.png) no-repeat center;
+          background-position: 0 0;
+          position: absolute;
+          right: 26px;
+          top: 14px;
+          &:hover {
+            background-position: -21px 0;
+          }
+        }
+      }
+    }
+  }
+  .head3-sellCar {
+    width: 370px;
+    height: 190px;
+    float: left;
+    .head3-h2 {
+      p {
+        font-size: 15px;
+        color: #a8abae;
+        float: right;
+        height: 46px;
+        line-height: 46px;
+        span {
+          display: inline-block;
+          font-size: 18px;
+          color: #3cb46d;
+        }
+      }
+    }
+    .head3-phoneinput {
+      outline: nonr;
+      border-radius: 5px;
+      width: 336px;
+      height: 45px;
+      line-height: 47px;
+      background: #f5f5f7;
+      border: 0;
+      font-size: 12px;
+      color: #acb4bd;
+      padding-left: 32px;
+      margin-top: 20px;
+      border: 1px solid #e5e5e5;
+    }
+    .head3-btn {
+      width: 100%;
+      height: 64px;
+      margin-top: 15px;
+      button {
+        width: 180px;
+        height: 64px;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        border: 0;
+        &:first-child {
+          background: #3cb46d;
+          float: left;
+          &:hover {
+            background: #349b5e;
+          }
+        }
+        &:last-child {
+          background: #8ec500;
+          float: right;
+          &:hover {
+            background: #88ba00;
+          }
+        }
+      }
+    }
+  }
+  /* 我要买卖车的头部标题 */
+  .head3-h2 {
+    width: 100%;
+    height: 46px;
+    a {
+      &:first-child {
+        display: block;
+        font-size: 19px;
+        color: #495056;
+        height: 46px;
+        line-height: 46px;
+        width: 96px;
+        text-align: left;
+        margin-left: 2px;
+        float: left;
+        &:hover {
+          color: #22ac38;
+          i {
+            background-position: -153px 0;
+          }
+        }
+        i {
+          background: url( ../img/script-head.png) no-repeat right;
+          display: block;
+          float: right;
+          width: 7px;
+          height: 13px;
+          background-position: -141px 0;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+  /* 我要买车 */
+  /* 我要买车下面的分类 */
+  .head3-classify {
+    width: 700px;
+    margin-left: -15px;
+    .head3-classify1 {
+      width: 700px;
+      height: 16px;
+      margin-top: 27px;
+      line-height: 16px;
+      li {
+        width: 74px;
+        height: 16px;
+        float: left;
+        padding: 0 16px 0 10px;
+        a {
+          display: block;
+          font-size: 13px;
+          color: #495056;
+          text-align: center;
+          i {
+            img {
+              width: 24px;
+              height: 24px;
+              float: left;
+              margin-top: -4px;
+            }
+          }
+          .head3-more {
+            background: url( ../img/script-head.png) no-repeat;
+            background-position: 0 -125px;
+            width: 19px;
+            height: 5px;
+            float: left;
+            margin: 5px 0 0 5px;
+          }
+        }
+      }
+    }
+    li {
+      a {
+        &:hover {
+          color: #22ac38;
+          .head3-more {
+            background-position: 0 -137px;
+          }
+        }
+      }
+    }
+  }
+  .head3-classify .head3-classify2,.head3-classify .head3-classify3 {
+    width: 700px;
+    height: 13px;
+    margin-top: 34px;
+    line-height: 13px;
+  }
+  .head3-classify .head3-classify2 li,.head3-classify .head3-classify3 li {
+    width: 96px;
+    height: 13px;
+    float: left;
+  }
+  .head3-classify .head3-classify2 li a,.head3-classify .head3-classify3 li a {
+    display: block;
+    font-size: 13px;
+    color: #495056;
+    text-align: center;
+  }
+  /* 我要卖车 */
+  /* content */
+  /* 三个大块信息 wrap1 */
+  #wrap1 {
+    width: 1200px;
+    height: auto;
+    margin: 193px auto 0;
+    .wrap-content1 {
+      height: 430px;
+      width: 100%;
+    }
+  }
+  #wrap1 .box2-1:hover,.box2-2:hover,.box2-3-1:hover,.box2-3-2:hover,.box2-4:hover {
+    box-shadow: 0px 5px 10px 2px #e0e0e2ca;
+    transition: all .5s;
+  }
+  .content1-box1 {
+    height: 85px;
+    width: 100%;
+    h2 {
+      font-size: 20px;
+      color: #495056;
+      margin-top: 39px;
+      float: left;
+    }
+    p {
+      font-size: 11px;
+      color: #a8abae;
+      margin: 45px 0 0 24px;
+      float: left;
+    }
+  }
+  .content1-box2 {
+    width: 100%;
+    height: 346px;
+    .box2-1 {
+      float: left;
+      width: 227px;
+      height: 346px;
+    }
+    .box2-2 {
+      float: left;
+      width: 227px;
+      height: 346px;
+      background: #fff;
+      margin-left: 16px;
+      img {
+        width: 227px;
+        height: 94px;
+        margin-top: 85px;
+      }
+      .box2-p {
+        width: 227px;
+        height: 93px;
+        padding-top: 54px;
+      }
+    }
+    .box2-3 {
+      float: left;
+      width: 470px;
+      height: 346px;
+      margin-left: 16px;
+      .box2-3-1 {
+        width: 470px;
+        height: 165px;
+        background: #fff;
+      }
+      .box2-3-2 {
+        width: 470px;
+        height: 165px;
+        margin-top: 16px;
+        background: #fff;
+      }
+    }
+    .box2-4 {
+      float: left;
+      height: 346px;
+      margin-left: 16px;
+    }
+  }
+  /* 第一个盒子 */
+  .content1-box2 .box2-1 img,.content1-box2 .box2-4 img {
+    width: auto;
+    height: 346px;
+  }
+  /* 第二个盒子 */
+  .box2-p {
+    p {
+      &:first-child {
+        font-size: 15px;
+        color: #495056;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+      }
+      &:last-child {
+        font-size: 15px;
+        color: #f76367;
+        text-align: center;
+        margin-top: 19px;
+        height: 15px;
+        line-height: 15px;
+      }
+    }
+  }
+  /* 第三个盒子 */
+  .content1-box2 .box2-3 .box2-3-1 img,.content1-box2 .box2-3 .box2-3-2 img {
+    width: 263px;
+    height: 89px;
+    float: left;
+    margin-top: 38px;
+  }
+  .content1-box2 .box2-3 .box2-3-1 .box2-p,.content1-box2 .box2-3 .box2-3-2 .box2-p {
+    float: left;
+    height: 55px;
+    margin-top: 58px;
+  }
+  /* 第四个盒子 */
+
+  /* 距离尾部的轮播 */
+  #wrap2 {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 60px;
+  }
+  .wrap2-icon2 {
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  .wrap2-buyCar {
+    width: 1520px;
+    height: 400px;
+    // position: relative;
+    // overflow: hidden;
+    // z-index: 99;
+    .buyCarShow{
+      width: 1520px;
+      height: 400px;
+      position: relative;
+      overflow: hidden;
+      ul {
+        width: 7600px;
+        height: 400px;
+        position: absolute;
+        li {
+          width: 1520px;
+          height: 400px;
+          float: left;
+          position: relative;
+          div{
+            height: 80px;
+            width:1200px;
+            position: absolute;
+            top: 160px;
+            left: 90px;
+            span{
+              display: block;
+              font-size: 40px;
+              color: #495056;
+              height: 40px;
+              line-height: 40px;
+            }
+            p{
+              font-size: 18px;
+              color: #848c95;
+              height: 18px;
+              line-height: 18px;
+              margin-top: 22px;
+            }
+          }
+          img {
+            width: 100%;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+  /* 买车和买车的两个按钮 */
+  .wrap2-top {
+    width: 182px;
+    height: 20px;
+    padding: 10px 0;
+    position: absolute;
+    top: 62px;
+    a {
+      &:first-of-type {
+        display: block;
+        font-size: 15px;
+        color: #495056;
+        float: left;
+        border-bottom: 3px solid #22ac38;
+      }
+      &:last-of-type {
+        display: block;
+        font-size: 15px;
+        color: #495056;
+        float: right;
+      }
+    }
+   
+    span {
+      display: inline-block;
+      width: 1px;
+      height: 15px;
+      background: url( ../img/line.png) no-repeat;
+      margin: 0 26px;
+    }
+  }
+  /* 买车卖车的流程 */
+  .wrap2-buyCarList {
+    width: 1200px;
+    height: 55px;
+    position: absolute;
+    top: 270px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    button {
+      &:nth-of-type(1) {
+        i {
+          background-position: 0 -30px;
+          width: 25px;
+          height: 25px;
+        }
+        &:active{
+          i{
+          background-position: 0 -66px;
+          width: 25px;
+          height: 25px;
+           }
+           p{
+             color: #3cb46d;
+           }
+        }
+      }
+      &:nth-of-type(2) {
+        i {
+          background-position: -42px -30px;
+          width: 30px;
+          height: 22px;
+        }
+        &:active{
+          i{
+          background-position: -42px -66px;
+          width: 30px;
+          height: 22px;
+           }
+            p{
+            color: #3cb46d;
+          }
+        }
+      }
+      &:nth-of-type(3) {
+        i {
+          background-position: -87px -30px;
+          width: 20px;
+          height: 26px;
+        }
+        &:active{
+          i{
+          background-position: -87px -66px;
+          width: 20px;
+          height: 26px;
+           }
+            p{
+            color: #3cb46d;
+          }
+        }
+      }
+      &:nth-of-type(4) {
+        i {
+          background-position: -122px -30px;
+          width: 25px;
+          height: 25px;
+        }
+        &:active{
+          i{
+          background-position: -122px -66px;
+          width: 25px;
+          height: 25px;
+           }
+            p{
+            color: #3cb46d;
+          }
+        }
+      }
+    }
+}
+  .wrap2-sellCarList {
+    width: 430px;
+    height: 55px;
+    position: absolute;
+    top: 270px;
+    display: none;
+    button {
+      &:nth-of-type(1) {
+        i {
+          background-position: -305px -4px;
+          width: 26px;
+          height: 25px;
+        }
+      }
+      &:nth-of-type(2) {
+        i {
+          background-position: -306px -40px;
+          width: 23px;
+          height: 23px;
+        }
+      }
+      &:nth-of-type(3) {
+        i {
+          background-position: -306px -75px;
+          width: 25px;
+          height: 23px;
+        }
+      }
+      &:nth-of-type(4) {
+        i {
+          background-position: -306px -113px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  /* 四个流程按钮 */
+  button {
+    border: none;
+    outline: none;
+    width: 57px;
+    height: 55px;
+    float: left;
+    background: none;
+    p {
+      width: 57px;
+      height: 12px;
+      line-height: 12px;
+      margin-top: 43px;
+      font-size: 12px;
+      color: #8f969e;
+    }
+    i {
+      background: url( ../img/script-head.png) no-repeat;
+      float: left;
+      margin: 0 14px;
+    }
+  }
+  /* 买车的四个流程 */
+  /* 卖车的四个流程 */
+  .right {
+    float: left;
+    display: block;
+    width: 14px;
+    height: 10px;
+    background: url( ../img/script-head.png) no-repeat;
+    background-position: 0 -102px;
+    margin: 45px 25px 0 22px;
+  }
+  

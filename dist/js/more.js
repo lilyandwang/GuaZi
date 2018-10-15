@@ -1,0 +1,1 @@
+$(function(){$(".wrap3-top-nav").children("li").on("click",function(s){$(this).css("border-bottom","2px solid #22ac38"),$(this).siblings().css("border-bottom","");var t=$(this).attr("data-id");$(".tab").css("display","none"),$('.tab[data-id="'+t+'"]').css("display","block")})});

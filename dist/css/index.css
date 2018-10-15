@@ -415,7 +415,14 @@
   width: 100%;
   height: 400px;
   position: relative;
-  top: 60px; }
+  margin: 60px auto 0; }
+  #wrap2 .wrap2-bg {
+    top: 0;
+    left: 0;
+    background: url(../img/banner5-bg.png) no-repeat top;
+    position: absolute;
+    width: 100%;
+    height: 400px; }
 
 .wrap2-icon2 {
   width: 1200px;
@@ -423,28 +430,33 @@
   margin: 0 auto; }
 
 .wrap2-buyCar {
-  width: 1520px;
+  width: 1583px;
   height: 400px; }
+  .wrap2-buyCar #left, .wrap2-buyCar #right {
+    display: none; }
   .wrap2-buyCar .buyCarShow {
-    width: 1520px;
+    width: 1583px;
     height: 400px;
     position: relative;
     overflow: hidden; }
     .wrap2-buyCar .buyCarShow ul {
-      width: 7600px;
+      width: 7915px;
       height: 400px;
       position: absolute; }
       .wrap2-buyCar .buyCarShow ul li {
-        width: 1520px;
+        width: 1583px;
         height: 400px;
         float: left;
         position: relative; }
         .wrap2-buyCar .buyCarShow ul li div {
           height: 80px;
           width: 1200px;
-          position: absolute;
+          left: 0;
+          right: 0;
           top: 160px;
-          left: 90px; }
+          margin: auto;
+          position: absolute;
+          z-index: 1; }
           .wrap2-buyCar .buyCarShow ul li div span {
             display: block;
             font-size: 40px;
@@ -461,36 +473,108 @@
           width: 100%;
           height: 400px; }
 
-/* 买车和买车的两个按钮 */
+.wrap2-sellCar {
+  width: 1583px;
+  height: 400px;
+  display: none; }
+  .wrap2-sellCar #left, .wrap2-sellCar #right {
+    display: none; }
+  .wrap2-sellCar .sellCarShow {
+    width: 1583px;
+    height: 400px;
+    position: relative;
+    overflow: hidden; }
+    .wrap2-sellCar .sellCarShow ul {
+      width: 7915px;
+      height: 400px;
+      position: absolute; }
+      .wrap2-sellCar .sellCarShow ul li {
+        width: 1583px;
+        height: 400px;
+        float: left;
+        position: relative; }
+        .wrap2-sellCar .sellCarShow ul li div {
+          height: 80px;
+          width: 1200px;
+          left: 0;
+          right: 0;
+          top: 160px;
+          margin: auto;
+          position: absolute;
+          z-index: 1; }
+          .wrap2-sellCar .sellCarShow ul li div span {
+            display: block;
+            font-size: 40px;
+            color: #495056;
+            height: 40px;
+            line-height: 40px; }
+          .wrap2-sellCar .sellCarShow ul li div p {
+            font-size: 18px;
+            color: #848c95;
+            height: 18px;
+            line-height: 18px;
+            margin-top: 22px; }
+        .wrap2-sellCar .sellCarShow ul li img {
+          width: 100%;
+          height: 400px; }
+
+/* 买车和卖车的两个按钮 */
 .wrap2-top {
-  width: 182px;
+  width: 1200px;
   height: 20px;
+  line-height: 20px;
   padding: 10px 0;
   position: absolute;
-  top: 62px; }
-  .wrap2-top a:first-of-type {
-    display: block;
+  top: 62px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10;
+  border: none;
+  outline: none;
+  background: none; }
+  .wrap2-top button {
+    display: inline-block;
     font-size: 15px;
     color: #495056;
     float: left;
-    border-bottom: 3px solid #22ac38; }
-  .wrap2-top a:last-of-type {
-    display: block;
-    font-size: 15px;
-    color: #495056;
-    float: right; }
+    border: none;
+    outline: none;
+    background: none; }
+    .wrap2-top button:active {
+      border-bottom: 3px solid #22ac38; }
   .wrap2-top span {
     display: inline-block;
     width: 1px;
     height: 15px;
     background: url(../img/line.png) no-repeat;
-    margin: 0 26px; }
+    margin: 0 26px;
+    float: left; }
 
-/* 买车卖车的流程 */
+.wrap2-buyCarList button, .wrap2-sellCarList button {
+  border: none;
+  outline: none;
+  width: 57px;
+  height: 55px;
+  float: left;
+  background: none; }
+  .wrap2-buyCarList button p, .wrap2-sellCarList button p {
+    width: 57px;
+    height: 12px;
+    line-height: 12px;
+    margin-top: 43px;
+    font-size: 12px;
+    color: #8f969e; }
+  .wrap2-buyCarList button i, .wrap2-sellCarList button i {
+    background: url(../img/script-head.png) no-repeat;
+    float: left;
+    margin: 0 14px; }
+
 .wrap2-buyCarList {
   width: 1200px;
   height: 55px;
   position: absolute;
+  z-index: 1;
   top: 270px;
   left: 0;
   right: 0;
@@ -538,50 +622,56 @@
     color: #3cb46d; }
 
 .wrap2-sellCarList {
-  width: 430px;
+  width: 1200px;
   height: 55px;
   position: absolute;
+  z-index: 1;
   top: 270px;
-  display: none; }
+  left: 0;
+  right: 0;
+  margin: auto;
+  cursor: pointer; }
   .wrap2-sellCarList button:nth-of-type(1) i {
     background-position: -305px -4px;
     width: 26px;
     height: 25px; }
+  .wrap2-sellCarList button:nth-of-type(1):active i {
+    background-position: -352px -4px;
+    width: 26px;
+    height: 25px; }
+  .wrap2-sellCarList button:nth-of-type(1):active p {
+    color: #3cb46d; }
   .wrap2-sellCarList button:nth-of-type(2) i {
     background-position: -306px -40px;
     width: 23px;
     height: 23px; }
-  .wrap2-sellCarList button:nth-of-type(3) i {
-    background-position: -306px -75px;
-    width: 25px;
+  .wrap2-sellCarList button:nth-of-type(2):active i {
+    background-position: -351px -40px;
+    width: 23px;
     height: 23px; }
+  .wrap2-sellCarList button:nth-of-type(2):active p {
+    color: #3cb46d; }
+  .wrap2-sellCarList button:nth-of-type(3) i {
+    background-position: -306px -74px;
+    width: 23px;
+    height: 23px; }
+  .wrap2-sellCarList button:nth-of-type(3):active i {
+    background-position: -351px -74px;
+    width: 25px;
+    height: 25px; }
+  .wrap2-sellCarList button:nth-of-type(3):active p {
+    color: #3cb46d; }
   .wrap2-sellCarList button:nth-of-type(4) i {
     background-position: -306px -113px;
     width: 24px;
     height: 24px; }
+  .wrap2-sellCarList button:nth-of-type(4):active i {
+    background-position: -351px -113px;
+    width: 24px;
+    height: 24px; }
+  .wrap2-sellCarList button:nth-of-type(4):active p {
+    color: #3cb46d; }
 
-/* 四个流程按钮 */
-button {
-  border: none;
-  outline: none;
-  width: 57px;
-  height: 55px;
-  float: left;
-  background: none; }
-  button p {
-    width: 57px;
-    height: 12px;
-    line-height: 12px;
-    margin-top: 43px;
-    font-size: 12px;
-    color: #8f969e; }
-  button i {
-    background: url(../img/script-head.png) no-repeat;
-    float: left;
-    margin: 0 14px; }
-
-/* 买车的四个流程 */
-/* 卖车的四个流程 */
 .right {
   float: left;
   display: block;
@@ -590,3 +680,305 @@ button {
   background: url(../img/script-head.png) no-repeat;
   background-position: 0 -102px;
   margin: 45px 25px 0 22px; }
+
+.wrap2-bottom dt {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  transition: all .8s; }
+
+#wrap3 {
+  width: 1202px;
+  margin: 0 auto; }
+  #wrap3 .wrap3-top {
+    width: 815px;
+    height: 32px;
+    padding: 40px 221px 20px; }
+    #wrap3 .wrap3-top li {
+      margin-right: 65px;
+      float: left; }
+      #wrap3 .wrap3-top li a {
+        display: block;
+        font-size: 15px;
+        color: #495056;
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer; }
+        #wrap3 .wrap3-top li a:hover {
+          color: #22ac38; }
+    #wrap3 .wrap3-top:last-of-type {
+      margin-right: 0; }
+  #wrap3 .wrap3-top-tab {
+    width: 1202px;
+    height: 972px;
+    overflow: hidden;
+    position: absolute; }
+    #wrap3 .wrap3-top-tab .tab {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 972px; }
+      #wrap3 .wrap3-top-tab .tab dl {
+        width: 285px;
+        height: 314px;
+        margin-right: 20px;
+        background: #fff;
+        float: left;
+        margin-bottom: 15px;
+        overflow: hidden; }
+        #wrap3 .wrap3-top-tab .tab dl dt {
+          width: 285px;
+          float: left;
+          display: block;
+          position: relative;
+          clear: left; }
+          #wrap3 .wrap3-top-tab .tab dl dt a {
+            display: block; }
+            #wrap3 .wrap3-top-tab .tab dl dt a img {
+              width: 285px;
+              height: 190px; }
+            #wrap3 .wrap3-top-tab .tab dl dt a .tab-p {
+              width: 245px;
+              height: 124px;
+              padding: 24px 20px 0; }
+              #wrap3 .wrap3-top-tab .tab dl dt a .tab-p span {
+                display: block;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: 245px; }
+              #wrap3 .wrap3-top-tab .tab dl dt a .tab-p .span1 {
+                font-size: 17px;
+                color: #495056;
+                height: 17px;
+                line-height: 17px; }
+              #wrap3 .wrap3-top-tab .tab dl dt a .tab-p .span2 {
+                font-size: 12px;
+                color: #a5abb2;
+                height: 12px;
+                line-height: 12px;
+                margin-top: 15px; }
+              #wrap3 .wrap3-top-tab .tab dl dt a .tab-p div {
+                height: 20px;
+                margin-top: 14px; }
+                #wrap3 .wrap3-top-tab .tab dl dt a .tab-p div .span3 {
+                  font-size: 15px;
+                  color: #f95523;
+                  height: 15px;
+                  line-height: 15px;
+                  float: left;
+                  display: block;
+                  width: 66px; }
+                #wrap3 .wrap3-top-tab .tab dl dt a .tab-p div .span4 {
+                  display: block;
+                  font-size: 12px;
+                  color: #a5abb2;
+                  height: 12px;
+                  line-height: 12px;
+                  text-decoration: line-through;
+                  float: left;
+                  width: 50px; }
+                #wrap3 .wrap3-top-tab .tab dl dt a .tab-p div .span5 {
+                  display: block;
+                  width: 46px;
+                  height: 21px;
+                  background: #fcf2d5;
+                  font-size: 11px;
+                  color: #d7a844;
+                  text-align: center;
+                  line-height: 21px;
+                  float: right; }
+        #wrap3 .wrap3-top-tab .tab dl:nth-child(4n) {
+          margin-right: 0; }
+        #wrap3 .wrap3-top-tab .tab dl:hover {
+          transition: all .5s;
+          box-shadow: 0 2px 15px #999; }
+  #wrap3 .wrap3-bottom {
+    width: 100%;
+    height: 51px;
+    margin: 975px auto 0;
+    padding-top: 44px; }
+    #wrap3 .wrap3-bottom a {
+      display: block;
+      width: 108px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto; }
+      #wrap3 .wrap3-bottom a p {
+        font-size: 12px;
+        color: #495056;
+        float: left; }
+      #wrap3 .wrap3-bottom a i {
+        display: block;
+        float: right;
+        background: url(../img/script-head.png) no-repeat center;
+        width: 16px;
+        height: 16px;
+        background-position: -183px 0; }
+
+.foot-top {
+  width: 100%;
+  height: 90px;
+  background: url(../img/foot-bg.jpg) repeat-x center;
+  padding-top: 30px; }
+  .foot-top .foot-top-cont {
+    width: 780px;
+    height: 64px;
+    margin: 0 auto; }
+    .foot-top .foot-top-cont span {
+      width: 380px;
+      height: 64px;
+      display: block;
+      float: left; }
+      .foot-top .foot-top-cont span i {
+        background: url(../img/script-head.png) no-repeat top center;
+        background-position: -1px -170px;
+        width: 380px;
+        height: 28px;
+        display: block;
+        margin-top: 0; }
+      .foot-top .foot-top-cont span p {
+        font-size: 13px;
+        color: #858d96;
+        text-align: center;
+        margin-top: 15px; }
+    .foot-top .foot-top-cont .head3-btn {
+      height: 64px; }
+      .foot-top .foot-top-cont .head3-btn button {
+        width: 180px;
+        height: 64px;
+        font-size: 15px;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        border: 0; }
+        .foot-top .foot-top-cont .head3-btn button:first-child {
+          background: #3cb46d;
+          float: left;
+          margin: 0 11px 0 22px; }
+          .foot-top .foot-top-cont .head3-btn button:first-child:hover {
+            background: #349b5e; }
+        .foot-top .foot-top-cont .head3-btn button:last-child {
+          background: #8ec500;
+          float: left; }
+          .foot-top .foot-top-cont .head3-btn button:last-child:hover {
+            background: #88ba00; }
+
+footer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #2a2c37;
+  padding: 50px 0 30px; }
+
+.foot-bottom {
+  height: auto;
+  width: 1195px;
+  margin: 0 auto; }
+  .foot-bottom .foot-bottom1 {
+    height: 120px;
+    width: 100%; }
+    .foot-bottom .foot-bottom1 .bottom1-box1 {
+      display: block;
+      width: 100px;
+      height: 90px;
+      background: url(../img/global.png) no-repeat top;
+      background-position: -155px -100px;
+      margin-left: 40px;
+      float: left; }
+    .foot-bottom .foot-bottom1 .bottom1-box2 {
+      width: 356px;
+      height: 120px;
+      float: left;
+      margin-left: 30px; }
+      .foot-bottom .foot-bottom1 .bottom1-box2 p {
+        color: #b8b8b8;
+        font-size: 13px;
+        height: 12px;
+        line-height: 12px; }
+        .foot-bottom .foot-bottom1 .bottom1-box2 p:nth-child(1) {
+          margin-top: 6px; }
+        .foot-bottom .foot-bottom1 .bottom1-box2 p:nth-child(2) {
+          margin-top: 12px; }
+        .foot-bottom .foot-bottom1 .bottom1-box2 p:nth-child(3) {
+          margin-top: 28px; }
+        .foot-bottom .foot-bottom1 .bottom1-box2 p:nth-child(4) {
+          margin-top: 10px; }
+    .foot-bottom .foot-bottom1 .bottom1-box3 {
+      width: 200px;
+      float: left;
+      margin-left: 22px; }
+      .foot-bottom .foot-bottom1 .bottom1-box3 span {
+        display: block;
+        width: 85px;
+        height: 103px; }
+        .foot-bottom .foot-bottom1 .bottom1-box3 span p {
+          font-size: 12px;
+          color: #b8b8b8;
+          height: 12px;
+          line-height: 12px;
+          margin-top: 6px;
+          text-align: center; }
+        .foot-bottom .foot-bottom1 .bottom1-box3 span:nth-child(1) {
+          float: left; }
+          .foot-bottom .foot-bottom1 .bottom1-box3 span:nth-child(1) i {
+            display: block;
+            width: 85px;
+            height: 85px;
+            background: url(../img/script-foot.png) no-repeat top;
+            background-position: -101px -40px; }
+        .foot-bottom .foot-bottom1 .bottom1-box3 span:nth-child(2) {
+          float: left;
+          margin-left: 30px; }
+          .foot-bottom .foot-bottom1 .bottom1-box3 span:nth-child(2) i {
+            display: block;
+            width: 85px;
+            height: 85px;
+            background: url(../img/script-foot.png) no-repeat top;
+            background-position: -101px -138px; }
+    .foot-bottom .foot-bottom1 .bottom1-box4 {
+      width: 382px;
+      height: 120px;
+      float: left;
+      margin-left: 50px; }
+      .foot-bottom .foot-bottom1 .bottom1-box4 ul {
+        width: 382px;
+        margin-top: 6px;
+        height: 35px; }
+        .foot-bottom .foot-bottom1 .bottom1-box4 ul li {
+          height: 14px;
+          float: left;
+          margin-right: 9px; }
+          .foot-bottom .foot-bottom1 .bottom1-box4 ul li a {
+            display: block;
+            font-size: 12px;
+            color: #b8b8b8;
+            height: 14px;
+            line-height: 14px;
+            cursor: pointer; }
+            .foot-bottom .foot-bottom1 .bottom1-box4 ul li a:hover {
+              text-decoration: underline; }
+      .foot-bottom .foot-bottom1 .bottom1-box4 p {
+        font-size: 10px;
+        color: #b8b8b8; }
+        .foot-bottom .foot-bottom1 .bottom1-box4 p:nth-child(2) {
+          margin-top: 10px; }
+        .foot-bottom .foot-bottom1 .bottom1-box4 p:nth-child(3) {
+          margin-top: 6px; }
+        .foot-bottom .foot-bottom1 .bottom1-box4 p:nth-child(4) {
+          margin-top: 5px; }
+          .foot-bottom .foot-bottom1 .bottom1-box4 p:nth-child(4) i {
+            width: 18px;
+            height: 20px;
+            background: url(../img/icon-foot.png) no-repeat left;
+            background-position: 0 -62px;
+            display: block;
+            float: left;
+            padding-right: 5px; }
+          .foot-bottom .foot-bottom1 .bottom1-box4 p:nth-child(4) a {
+            float: left;
+            display: block;
+            font-size: 11px;
+            color: #b8b8b8; }

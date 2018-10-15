@@ -22,7 +22,7 @@ $.extend(Banner.prototype,{
         // console.log(nowIndex);
         // 有多少元素;
         this.item_num = this.item_list.length;
-        this.ul = $(".buyCarShow ul");
+        this.ul = $(".sellCarShow ul");
         // 获取列表中第一个元素的宽度值;
         this.item_width = this.item_list.width();
         
@@ -99,9 +99,9 @@ $.extend(Banner.prototype,{
 })
 var banner = new Banner();
 banner.init({
-    item_list : ".wrap2-buyCar li",
+    item_list : ".wrap2-sellCar li",
     left_btn : "#left",
     right_btn : "#right",
-    btn_list : ".wrap2-buyCarList button" 
+    btn_list : ".wrap2-sellCarList button" 
 })
 banner.autoPlay();

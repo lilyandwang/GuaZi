@@ -40,10 +40,12 @@ gulp.task("html", ()=>{
 gulp.task("img", ()=>{
     return gulp.src("img/*").pipe(gulp.dest("dist/img")).pipe(connect.reload());;
 })
+gulp.task("ico", ()=>{
+    return gulp.src("*.ico").pipe(gulp.dest("dist/")).pipe(connect.reload());;
+})
 gulp.task("watch", ()=>{
     gulp.watch("index.html",["html","sass"]);
     gulp.watch("sass/*.scss",["html","sass"]);
-    // gulp.watch("js/*.js",["html","script"]);
 })
 
 gulp.task("default",["watch","connect"]);

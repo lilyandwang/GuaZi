@@ -29,7 +29,8 @@
   line-height: 12px;
   font-size: 12px;
   color: #495056;
-  text-align: left; }
+  text-align: left;
+  cursor: pointer; }
   .head1-city i {
     width: 11px;
     height: 6px;
@@ -56,7 +57,8 @@
     color: #333;
     margin-right: 54px;
     margin-top: 28px;
-    height: 32px; }
+    height: 32px;
+    cursor: pointer; }
     .head1-nav1 a:first-child {
       border-bottom: 3px solid #22ac38; }
     .head1-nav1 a:last-child {
@@ -68,36 +70,38 @@
   float: right;
   width: 261px;
   height: 64px; }
-  .head1-nav2 a:first-child {
-    display: block;
-    width: 46px;
-    height: 15px;
-    line-height: 15px;
-    padding: 28px 0 21px 0;
-    float: left;
-    font-size: 12px;
-    color: #495056;
-    text-align: right; }
-    .head1-nav2 a:first-child i {
-      width: 14px;
-      height: 15px;
-      background: url(../img/script-head.png) no-repeat center 5px;
-      background-position: 0 -213px;
+  .head1-nav2 a {
+    cursor: pointer; }
+    .head1-nav2 a:first-child {
       display: block;
-      float: left; }
-    .head1-nav2 a:first-child:hover {
-      color: #22ac38; }
-      .head1-nav2 a:first-child:hover i {
-        background-position: 0 -241px; }
-  .head1-nav2 a:last-child {
-    float: left;
-    height: 18px;
-    line-height: 18px;
-    display: block;
-    font-size: 18px;
-    color: #22ac38;
-    font-weight: bold;
-    margin-top: 28px; }
+      width: 46px;
+      height: 15px;
+      line-height: 15px;
+      padding: 28px 0 21px 0;
+      float: left;
+      font-size: 12px;
+      color: #495056;
+      text-align: right; }
+      .head1-nav2 a:first-child i {
+        width: 14px;
+        height: 15px;
+        background: url(../img/script-head.png) no-repeat center 5px;
+        background-position: 0 -213px;
+        display: block;
+        float: left; }
+      .head1-nav2 a:first-child:hover {
+        color: #22ac38; }
+        .head1-nav2 a:first-child:hover i {
+          background-position: 0 -241px; }
+    .head1-nav2 a:last-child {
+      float: left;
+      height: 18px;
+      line-height: 18px;
+      display: block;
+      font-size: 18px;
+      color: #22ac38;
+      font-weight: bold;
+      margin-top: 28px; }
   .head1-nav2 .line {
     width: 1px;
     height: 18px;
@@ -164,6 +168,21 @@
     display: block;
     right: 0;
     padding-left: 30px; }
+  .head3-buyCar .head3-h2 ::-webkit-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-buyCar .head3-h2 :-moz-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-buyCar .head3-h2 ::-moz-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-buyCar .head3-h2 :-ms-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-buyCar .head3-h2 ::-ms-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
   .head3-buyCar .head3-h2 a:last-child {
     display: block;
     width: 18px;
@@ -203,6 +222,21 @@
     padding-left: 32px;
     margin-top: 20px;
     border: 1px solid #e5e5e5; }
+  .head3-sellCar ::-webkit-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-sellCar :-moz-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-sellCar ::-moz-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-sellCar :-ms-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
+  .head3-sellCar ::-ms-input-placeholder {
+    font-size: 13px;
+    color: #acb4bd; }
   .head3-sellCar .head3-btn {
     width: 100%;
     height: 64px;
@@ -982,3 +1016,62 @@ footer {
             display: block;
             font-size: 11px;
             color: #b8b8b8; }
+  .foot-bottom .foot-bottom2 {
+    width: 1198px;
+    height: auto;
+    margin: 44px auto 0; }
+    .foot-bottom .foot-bottom2 ul {
+      width: 100%;
+      height: auto;
+      color: #666; }
+      .foot-bottom .foot-bottom2 ul li {
+        height: auto; }
+        .foot-bottom .foot-bottom2 ul li div {
+          height: 30px;
+          line-height: 30px; }
+          .foot-bottom .foot-bottom2 ul li div i {
+            width: 18px;
+            height: 9px;
+            background: url(../img/global.png) no-repeat center right;
+            background-position: -70px -100px;
+            margin-top: 5px;
+            float: right; }
+            .foot-bottom .foot-bottom2 ul li div i:active {
+              background-position: -90px -100px; }
+          .foot-bottom .foot-bottom2 ul li div span {
+            display: block;
+            float: left;
+            font-size: 15px; }
+          .foot-bottom .foot-bottom2 ul li div dd {
+            float: left; }
+            .foot-bottom .foot-bottom2 ul li div dd a {
+              display: block;
+              float: left;
+              font-size: 12px;
+              margin-left: 25px;
+              cursor: pointer; }
+              .foot-bottom .foot-bottom2 ul li div dd a:first-of-type {
+                margin-left: 15px; }
+              .foot-bottom .foot-bottom2 ul li div dd a:hover {
+                text-decoration: underline; }
+        .foot-bottom .foot-bottom2 ul li .open-box {
+          width: 1050px;
+          height: auto;
+          padding-left: 60px;
+          display: none; }
+          .foot-bottom .foot-bottom2 ul li .open-box a {
+            display: block;
+            font-size: 10px;
+            color: #666;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 25px; }
+    .foot-bottom .foot-bottom2 p {
+      font-size: 9px;
+      color: #666;
+      height: 10px;
+      line-height: 10px;
+      text-align: center;
+      width: 100%;
+      margin: 30px auto 0; }

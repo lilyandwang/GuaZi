@@ -46,7 +46,7 @@ gulp.task("ico", ()=>{
     return gulp.src("*.ico").pipe(gulp.dest("dist/")).pipe(connect.reload());;
 })
 gulp.task("watch", ()=>{
-    gulp.watch("index.html",["html","html"]);
+    gulp.watch("*.html",["html","html"]);
     gulp.watch("sass/*.scss",["html","sass"]);
     gulp.watch("js/*.js",["html","script"]);
     gulp.watch("img/*",["html","img"]);

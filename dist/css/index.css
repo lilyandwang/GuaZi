@@ -1,4 +1,113 @@
 @charset "UTF-8";
+#right-nav {
+  width: 40px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  background: #2a2c37; }
+
+#right-nav .w {
+  position: fixed;
+  bottom: 40px;
+  right: 0;
+  width: 40px;
+  height: 60%; }
+
+#right-nav-list1 {
+  position: relative;
+  right: 0;
+  top: 0;
+  z-index: 10; }
+
+#right-nav li a {
+  display: block;
+  background: url(../img/script-foot.png) no-repeat center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+#right-nav li {
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 45px;
+  width: 40px; }
+  #right-nav li:nth-child(1) a {
+    width: 15px;
+    height: 15px;
+    background-position: -48px -2px; }
+    #right-nav li:nth-child(1) a:hover {
+      background-position: 0 -2px; }
+  #right-nav li:nth-child(2) a {
+    width: 17px;
+    height: 14px;
+    background-position: -48px -33px; }
+    #right-nav li:nth-child(2) a:hover {
+      background-position: 0 -33px; }
+  #right-nav li:nth-child(3) a {
+    width: 14px;
+    height: 13px;
+    background-position: -48px -65px; }
+    #right-nav li:nth-child(3) a:hover {
+      background-position: 0 -65px; }
+  #right-nav li:nth-child(4) a {
+    width: 14px;
+    height: 14px;
+    background-position: -48px -96px; }
+    #right-nav li:nth-child(4) a:hover {
+      background-position: 0 -96px; }
+  #right-nav li:nth-child(5) a {
+    width: 15px;
+    height: 14px;
+    background-position: -48px -132px; }
+    #right-nav li:nth-child(5) a:hover {
+      background-position: 0 -132px; }
+  #right-nav li .nav-hide {
+    display: none;
+    width: 15px;
+    height: 12px;
+    background-position: -48px -160px; }
+    #right-nav li .nav-hide:hover {
+      background-position: 0 -160px; }
+
+#right-nav li div {
+  width: auto;
+  height: auto;
+  position: absolute;
+  left: 40px;
+  top: -10px;
+  z-index: -1;
+  font-size: 10px;
+  background: #fff;
+  color: #495056;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 0 4px #495056; }
+
+#right-nav li:nth-child(1):hover div, #right-nav li:nth-child(2):hover div {
+  left: -260px;
+  top: -80px; }
+
+#right-nav li:nth-child(3):hover div {
+  left: -170px;
+  top: -10px;
+  padding: 10px 50px; }
+
+#right-nav li:nth-child(4):hover div {
+  left: -250px;
+  top: -10px;
+  padding: 10px 50px; }
+
 /* ---------------head------------------ */
 /* 头部的nav */
 #head1 {
@@ -43,6 +152,52 @@
     .head1-city:hover i {
       background-position: -284px -35px; }
 
+.active {
+  background: #fff;
+  color: #495056; }
+
+.head1-city-hide {
+  width: 770px;
+  height: 354px;
+  position: absolute;
+  top: 50px;
+  left: 78px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  z-index: 20;
+  background: #fff;
+  display: none;
+  padding: 18px 0;
+  overflow: auto; }
+  .head1-city-hide li {
+    height: auto;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 17px; }
+    .head1-city-hide li span {
+      display: block;
+      font-size: 12px;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      color: #a5abb2;
+      width: 40px;
+      text-align: center; }
+    .head1-city-hide li div {
+      width: 650px;
+      float: left; }
+      .head1-city-hide li div a {
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 13px;
+        color: #495056;
+        width: auto;
+        float: left;
+        margin-left: 16px;
+        cursor: pointer; }
+        .head1-city-hide li div a:hover {
+          color: #22ac38; }
+
 .head1-nav1 {
   width: 577px;
   height: 61px;
@@ -71,37 +226,27 @@
   width: 261px;
   height: 64px; }
   .head1-nav2 a {
-    cursor: pointer; }
-    .head1-nav2 a:first-child {
-      display: block;
-      width: 46px;
+    cursor: pointer;
+    display: block;
+    width: 46px;
+    height: 15px;
+    line-height: 15px;
+    padding: 28px 0 21px 0;
+    float: left;
+    font-size: 12px;
+    color: #495056;
+    text-align: right; }
+    .head1-nav2 a i {
+      width: 14px;
       height: 15px;
-      line-height: 15px;
-      padding: 28px 0 21px 0;
-      float: left;
-      font-size: 12px;
-      color: #495056;
-      text-align: right; }
-      .head1-nav2 a:first-child i {
-        width: 14px;
-        height: 15px;
-        background: url(../img/script-head.png) no-repeat center 5px;
-        background-position: 0 -213px;
-        display: block;
-        float: left; }
-      .head1-nav2 a:first-child:hover {
-        color: #22ac38; }
-        .head1-nav2 a:first-child:hover i {
-          background-position: 0 -241px; }
-    .head1-nav2 a:last-child {
-      float: left;
-      height: 18px;
-      line-height: 18px;
+      background: url(../img/script-head.png) no-repeat center 5px;
+      background-position: 0 -213px;
       display: block;
-      font-size: 18px;
-      color: #22ac38;
-      font-weight: bold;
-      margin-top: 28px; }
+      float: left; }
+    .head1-nav2 a:hover {
+      color: #22ac38; }
+      .head1-nav2 a:hover i {
+        background-position: 0 -241px; }
   .head1-nav2 .line {
     width: 1px;
     height: 18px;
@@ -139,7 +284,7 @@
   right: 0;
   margin: auto;
   box-shadow: 0 2px 7px #e2e3e7;
-  z-index: 20;
+  z-index: 9;
   border-radius: 5px;
   background: #fff;
   padding: 25px 49px 42px 48px; }
@@ -158,16 +303,17 @@
     outline: none;
     border: 0;
     font-size: 13px;
-    color: #acb4bd;
     background: #f5f5f7;
     width: 297px;
     height: 46px;
-    border: 1px solid #e7e7e7;
     border-radius: 23px;
     position: absolute;
     display: block;
     right: 0;
     padding-left: 30px; }
+    .head3-buyCar .head3-h2 .head3-searchinput:active {
+      background: #fff;
+      border: 1px solid #dfe3e3; }
   .head3-buyCar .head3-h2 ::-webkit-input-placeholder {
     font-size: 13px;
     color: #acb4bd; }
@@ -194,6 +340,29 @@
     top: 14px; }
     .head3-buyCar .head3-h2 a:last-child:hover {
       background-position: -21px 0; }
+  .head3-buyCar .res {
+    width: 330px;
+    height: 239px;
+    position: absolute;
+    z-index: 10;
+    top: 75px;
+    left: 410px;
+    display: none;
+    background: #fff;
+    box-shadow: 0 0 5px gray;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+    line-height: 24px; }
+    .head3-buyCar .res li {
+      font-size: 12px;
+      height: 26px;
+      line-height: 26px;
+      padding: 0 5px; }
+      .head3-buyCar .res li:first-child {
+        background: #f8f8f8;
+        color: #a5abb2; }
 
 .head3-sellCar {
   width: 370px;
@@ -222,6 +391,9 @@
     padding-left: 32px;
     margin-top: 20px;
     border: 1px solid #e5e5e5; }
+    .head3-sellCar .head3-phoneinput:active {
+      background: #fff;
+      border: 1px solid #dfe3e3; }
   .head3-sellCar ::-webkit-input-placeholder {
     font-size: 13px;
     color: #acb4bd; }
@@ -575,8 +747,8 @@
     border: none;
     outline: none;
     background: none; }
-    .wrap2-top button:active {
-      border-bottom: 3px solid #22ac38; }
+  .wrap2-top .active2 {
+    border-bottom: 3px solid #22ac38; }
   .wrap2-top span {
     display: inline-block;
     width: 1px;
@@ -740,6 +912,9 @@
         cursor: pointer; }
         #wrap3 .wrap3-top li a:hover {
           color: #22ac38; }
+      #wrap3 .wrap3-top li .active1 {
+        color: #22ac38;
+        border-bottom: 2px solid #22ac38; }
     #wrap3 .wrap3-top:last-of-type {
       margin-right: 0; }
   #wrap3 .wrap3-top-tab {

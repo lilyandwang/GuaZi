@@ -1,3 +1,127 @@
+// /* 侧栏 */
+#right-nav{
+	width:40px;
+	height: 100%;
+	position: fixed;
+	top:0;
+	right:0;
+  z-index: 10;
+  background: #2a2c37;
+}
+#right-nav .w{
+	position: fixed;
+	bottom:40px;
+	right:0;
+	width:40px;
+	height: 60%;
+}
+#right-nav-list1{
+	position: relative;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+#right-nav li a{
+	display: block;
+  background:url(../img/script-foot.png) no-repeat center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  position: relative;
+	left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#right-nav li{
+	position: relative;
+	left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+	height: 45px;
+  width: 40px;
+  &:nth-child(1) a{
+    width: 15px;
+    height: 15px;
+    background-position: -48px -2px;
+    &:hover{
+      background-position: 0 -2px;
+    }
+  }
+  &:nth-child(2) a{
+    width: 17px;
+    height: 14px;
+    background-position: -48px -33px;
+    &:hover{
+      background-position: 0 -33px;
+    }
+  }
+  &:nth-child(3) a{
+    width: 14px;
+    height: 13px;
+    background-position: -48px -65px;
+    &:hover{
+      background-position: 0 -65px;
+    }
+  }
+  &:nth-child(4) a{
+    width: 14px;
+    height: 14px;
+    background-position: -48px -96px;
+    &:hover{
+      background-position: 0 -96px;
+    }
+  }
+  &:nth-child(5) a{
+    width: 15px;
+    height: 14px;
+    background-position: -48px -132px;
+    &:hover{
+      background-position: 0 -132px;
+    }
+  }
+  .nav-hide{
+    display: none;
+    width: 15px;
+    height: 12px;
+    background-position: -48px -160px;
+    &:hover{
+      background-position: 0 -160px;
+    }
+  }
+}
+
+#right-nav li div{
+  width: auto;
+  height: auto;
+	position: absolute;
+	left:40px;
+	top: -10px;
+	z-index: -1;
+	font-size: 10px;
+	background: #fff;
+	color: #495056;
+  // padding: 10px 50px;
+	text-align: center;
+  border-radius: 3px;
+  box-shadow:  0 0 4px #495056;
+}
+#right-nav li:nth-child(1):hover div,#right-nav li:nth-child(2):hover div{
+  left:-260px;
+  top: -80px;
+}
+#right-nav li:nth-child(3):hover div{
+  left:-170px;
+  top: -10px;
+  padding: 10px 50px;
+}
+#right-nav li:nth-child(4):hover div{
+  left:-250px;
+  top: -10px;
+  padding: 10px 50px;
+}
 /* ---------------head------------------ */
 /* 头部的nav */
 #head1 {
@@ -30,6 +154,7 @@
     color: #495056;
     text-align: left;
     cursor: pointer;
+    
     i {
       width: 11px;
       height: 6px;
@@ -43,8 +168,63 @@
       i {
         background-position: -284px -35px;
       }
+      
     }
   }
+.active{
+    background: #fff;
+    color: #495056;
+}
+  // 当鼠标移上北京的时候出现的地点
+.head1-city-hide{
+  width: 770px;
+  height: 354px;
+  position: absolute;
+  top: 50px;
+  left: 78px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  z-index: 20;
+  background: #fff;
+  display: none;
+  padding: 18px 0;
+  overflow: auto;
+  li{
+    height: auto;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 17px;
+    span{
+      display: block;
+      font-size: 12px;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      color: #a5abb2;
+      width: 40px;
+      text-align: center;
+    }
+    div{
+      width: 650px;
+      float: left;
+       a{
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 13px;
+        color: #495056;
+        width: auto;
+        float: left;
+        margin-left: 16px;
+        cursor: pointer;
+        &:hover{
+          color: #22ac38;
+        }
+      }
+    }
+     
+    
+  }
+}
   .head1-nav1 {
     width: 577px;
     height: 61px;
@@ -78,7 +258,6 @@
     height: 64px;
     a {
       cursor: pointer;
-      &:first-child {
         display: block;
         width: 46px;
         height: 15px;
@@ -101,18 +280,18 @@
           i {
             background-position: 0 -241px;
           }
-        }
+        
       }
-      &:last-child {
-        float: left;
-        height: 18px;
-        line-height: 18px;
-        display: block;
-        font-size: 18px;
-        color: #22ac38;
-        font-weight: bold;
-        margin-top: 28px;
-      }
+      // &:last-child {
+      //   float: left;
+      //   height: 18px;
+      //   line-height: 18px;
+      //   display: block;
+      //   font-size: 18px;
+      //   color: #22ac38;
+      //   font-weight: bold;
+      //   margin-top: 28px;
+      // }
     }
     .line {
       width: 1px;
@@ -153,7 +332,7 @@
     right:0;
     margin: auto;
     box-shadow: 0 2px 7px #e2e3e7;
-    z-index: 20;
+    z-index: 9;
     border-radius: 5px;
     background: #fff;
     padding: 25px 49px 42px 48px;
@@ -174,17 +353,20 @@
         outline: none;
         border: 0;
         font-size: 13px;
-        color: #acb4bd;
+        // color: #acb4bd;
         background: #f5f5f7;
         width: 297px;
         height: 46px;
-        border: 1px solid #e7e7e7;
+        // border: 1px solid #e7e7e7;
         border-radius: 23px;
         position: absolute;
         display: block;
         right: 0;
         padding-left: 30px;
-        
+        &:active{
+          background: #fff;
+          border: 1px solid #dfe3e3;
+        }
       }
       ::-webkit-input-placeholder{
         font-size: 13px;
@@ -222,7 +404,38 @@
         }
       }
     }
-  }
+
+     
+      .res{ 
+        width: 330px;
+        height: 239px;
+        position: absolute;
+        z-index: 10;
+        top:75px;
+        left: 410px;
+        display: none;
+        background: #fff;
+        box-shadow: 0 0 5px gray;
+        cursor: pointer;
+        overflow: hidden;
+        font-size: 12px;
+        color: #666;
+        line-height: 24px;	
+        li{
+          font-size:12px;
+          height: 26px; 
+          line-height: 26px;
+          padding:0 5px;
+          &:first-child{
+            background: #f8f8f8;
+            color: #a5abb2;
+          }
+        }
+      }
+    }
+  
+  
+  
   .head3-sellCar {
     width: 370px;
     height: 190px;
@@ -254,6 +467,10 @@
       padding-left: 32px;
       margin-top: 20px;
       border: 1px solid #e5e5e5;
+      &:active{
+        background: #fff;
+        border: 1px solid #dfe3e3;
+      }
     }
     ::-webkit-input-placeholder{
       font-size: 13px;
@@ -674,9 +891,9 @@
         border: none; 
         outline: none;
         background: none;
-         &:active{
-           border-bottom: 3px solid #22ac38;
-        }
+    }
+    .active2{
+      border-bottom: 3px solid #22ac38;
     }
    
       span {
@@ -875,6 +1092,7 @@
         }
       }
     }
+   
   }
   //右箭头
   .right {
@@ -916,6 +1134,10 @@
              color: #22ac38;
            }
         }
+        .active1{
+            color:#22ac38;
+            border-bottom: 2px solid #22ac38;
+          }
         
       }
       &:last-of-type{

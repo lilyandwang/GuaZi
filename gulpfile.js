@@ -16,6 +16,8 @@ var babel = require("gulp-babel");
 var cleanCss = require("gulp-clean-css");
 // sass 编译插件;
 var sass = require("gulp-sass-china");
+//es2015检查机制
+var es2015 = require("babel-preset-es2015");
 
 
 gulp.task('connect', function() {
@@ -44,8 +46,10 @@ gulp.task("ico", ()=>{
     return gulp.src("*.ico").pipe(gulp.dest("dist/")).pipe(connect.reload());;
 })
 gulp.task("watch", ()=>{
-    gulp.watch("index.html",["html","sass"]);
+    gulp.watch("index.html",["html","html"]);
     gulp.watch("sass/*.scss",["html","sass"]);
+    gulp.watch("js/*.js",["html","script"]);
+    gulp.watch("img/*",["html","img"]);
 })
 
 gulp.task("default",["watch","connect"]);
@@ -55,7 +59,7 @@ gulp.task("default",["watch","connect"]);
 gulp.task("script", ()=>{
     return gulp.src(["js/*.js"])
     // .pipe(concat("mian.js"))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest("dist/js"));
 })
 
@@ -74,7 +78,7 @@ gulp.task("sass", () =>{
 // 编译 ? es6 => es5;
 
 gulp.task("es6",()=>{
-    return gulp.src("script/es2015/es6.js")
+    return gulp.src("script/es2015/*.js")
     .pipe(babel({
         presets: ['@babel/env']
     }))

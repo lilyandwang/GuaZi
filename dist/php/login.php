@@ -1,9 +1,9 @@
 <?php
+
     header("Content-Type:text/html;charset=utf-8;");
     #1. 从前端拿来数据;
-    $phone = @$_GET["phone"];
-    $password = @$_GET["password"];
-    echo $phone,$password;
+    $phone = @$_POST["phone"];
+    $password = @$_POST["password"];
     // $username = "yanghuaizhi";
     // $password = "123456";
     if($phone == "" || $password == ""){
@@ -29,8 +29,7 @@
     while($row = mysql_fetch_array($result)){
         // echo json_encode($row);
         if($row['password'] == $password){
-            // echo '<meta http-equiv="Refresh" content="5;url=http://localhost:8080/" />';
-            echo "登陆成功";
+            echo '<meta http-equiv="Refresh" content="5;url=http://localhost:8080/" />';
         }
     }
     echo "账号或者密码不正确";

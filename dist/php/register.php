@@ -1,8 +1,9 @@
 <?php
     header("Content-Type:text/html;charset=utf-8;");
     #1. 从前端拿来数据;
-    $phone = @$_GET["phone"];
-    $password = @$_GET["password"];
+    $phone = @$_POST["phone"];
+    $password = @$_POST["password"];
+    
     if($phone == "" || $password == "" ){
         die("参数不全");
     }
@@ -38,7 +39,7 @@
     if(mysql_error()){
         die("数据库错误".mysql_error());
     }
-    echo "注册成功" ;  
+    echo "PHP注册成功" ;  
     // echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost:8080/login.html">';
 
 ?>

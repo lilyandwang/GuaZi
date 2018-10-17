@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>瓜子二手车直买网详情页及放大镜</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/magnifier.css">
+    <link rel="shortcut icon" href="favicon.ico">
+</head>
+<body>
+    <!-- 顶部 -->
+           <!-- 右侧固定导航 -->
+<div id="right-nav">
+        <div class="w">
+            <ul id="right-nav-list1">
+                <li><a></a><div><img src="img/wei1.png"></div></li>
+                <li><a></a><div><img src="img/wei2.png"></div></li>
+                <li><a></a><div>意见反馈</div></li>
+                <li><a></a><div>免费咨询:400-069-6530</div></li>
+                <li><a></a><div>浏览记录</div></li>
+                <li><a class="nav-hide"></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 回到顶部效果 -->
+    <script> 
+        var oTop = document.querySelector(".nav-hide");
+        window.onscroll=function(){
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            var clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+            if(scrollTop > clientHeight){
+                oTop.style.display="block";
+            }
+            oTop.onclick = function(){
+                document.documentElement.scrollTop = 0;
+                document.body.scrollTop = 0;
+        }
+    }
+    </script>
+    <!-- 顶部 -->
+     <!-- 头部的nav -->
+     <div class="kong"></div>
+     <div id="head1" class="clearfix">
+         
+        <i class="head1-logo"></i>
+        <a class="head1-city">
+            <i></i>
+            北京
+        </a>
+        <!-- 当鼠标移上北京的时候出现的地点 -->
+        <div class="head1-city-hide">
+            <ul class="clearfix">
+                <li class="clearfix">
+                    <span>周边</span>
+                    <div class="clearfix">
+                        <a>天津</a>
+                        <a>唐山</a>
+                        <a>石家庄</a>
+                        <a>秦皇岛</a>
+                        <a>邢台</a>
+                        <a>承德</a>
+                        <a>衡水</a>
+                        <a>廊坊</a>
+                        
+                    </div>   
+                </li>
+                <li class="clearfix">
+                    <span>热门</span>
+                    <div class="clearfix">
+                        <a>全国</a>
+                        <a>北京</a>
+                        <a>上海</a>
+                        <a>广州</a>
+                        <a>深圳</a>
+                        <a>成都</a>
+                        <a>重庆</a>
+                        <a>杭州</a>
+                        <a>苏州</a>
+                        <a>沈阳</a>
+                        <a>武汉</a>
+                    </div> 
+                </li>
+                <li class="clearfix">
+                    <span>A</span>
+                    <div class="clearfix">
+                        <a>安庆</a>
+                        <a>鞍山</a>
+                        <a>安阳</a>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>B</span>
+                    <div class="clearfix">
+                        <a>保定</a>
+                        <a>宝鸡</a>
+                        <a>包头</a>
+                        <a>北京</a>
+                        <a>蚌埠</a>
+                        <a>毕节</a>
+                        <a>滨州</a>
+                        <a>宝坻</a>
+                        <a>滨海新区</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>C</span>
+                    <div class="clearfix">
+                        <a>沧州</a>
+                        <a>长春</a>
+                        <a>常德</a>
+                        <a>长沙</a>
+                        <a>长治</a>
+                        <a>常州</a>
+                        <a>承德</a>
+                        <a>成都</a>
+                        <a>郴州</a>
+                        <a>重庆</a>
+                        <a>滁州</a>
+                        <a>长寿</a>
+                        <a>常熟</a>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>D</span>
+                    <div class="clearfix">
+                        <a>大连</a>
+                        <a>丹东</a>
+                        <a>大庆</a>
+                        <a>大同</a>
+                        <a>达州</a>
+                        <a>德阳</a>
+                        <a>德州</a>
+                        <a>东莞</a>
+                        <a>东营</a>
+                        <a>大港</a>
+                        <a>大邑</a>
+                        <a>都江堰</a>
+                       
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>E</span>
+                    <div class="clearfix">
+                        <a>鄂尔多斯</a>
+                        <a>恩施</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>F</span>
+                    <div class="clearfix">
+                        <a>佛山</a>
+                        <a>抚顺</a>
+                        <a>阜阳</a>
+                        <a>福州</a>
+                        <a>涪陵</a>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>G</span>
+                    <div class="clearfix">
+                        <a>赣州</a>
+                        <a>广安</a>
+                        <a>广元</a>
+                        <a>广州</a>
+                        <a>桂林</a>
+                        <a>贵阳</a>
+               
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>H</span>
+                    <div class="clearfix">
+                        <a>哈尔滨</a>
+                        <a>邯郸</a>
+                        <a>杭州</a>
+                        <a>合肥</a>
+                        <a>衡水</a>
+                        <a>衡阳</a>
+                        <a>菏泽</a>
+                        <a>淮安</a>
+                        <a>淮北</a>
+                        <a>淮南</a>
+                        <a>黄冈</a>
+                        <a>黄石</a>
+                        <a>呼和浩特</a>
+                        <a>惠州</a>
+                        <a>湖州</a>
+                        <a>汉沽</a>
+                        <a>合川</a>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>J</span>
+                    <div class="clearfix">
+                        <a>佳木斯</a>
+                        <a>吉安</a>
+                        <a>江门</a>
+                        <a>焦作</a>
+                        <a>嘉兴</a>
+                        <a>揭阳</a>
+                        <a>吉林</a>
+                        <a>济南</a>
+                        <a>荆门</a>
+                        <a>荆州</a>
+                        <a>金华</a>
+                        <a>济宁</a>
+                        <a>晋中</a>
+                        <a>锦州</a>
+                        <a>九江</a>
+                        <a>江阴</a>
+                        <a>静海</a>
+                        <a>津南</a>
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>K</span>
+                    <div class="clearfix">
+                        <a>开封</a>
+                        <a>昆明</a>
+                        <a>开县</a>
+                        <a>昆山</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>L</span>
+                    <div class="clearfix">
+                        <a>廊坊</a>
+                        <a>兰州</a>
+                        <a>乐山</a>
+                        <a>连云港</a>
+                        <a>聊城</a>
+                        <a>辽阳</a>
+                        <a>临汾</a>
+                        <a>临沂</a>
+                        <a>丽水</a>
+                        <a>六盘水</a>
+                        <a>柳州</a>
+                        <a>龙岩</a>
+                        <a>娄底</a>
+                        <a>六安</a>
+                        <a>洛阳</a>
+                        <a>泸州</a>
+                       
+                    </div>
+              </li>
+                <li class="clearfix">
+                    <span>M</span>
+                    <div class="clearfix">
+                        <a>马鞍山</a>
+                        <a>茂名</a>
+                        <a>眉山</a>
+                        <a>绵阳</a>
+                        <a>牡丹江</a>
+                       
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>N</span>
+                    <div class="clearfix">
+                        <a>南昌</a>
+                        <a>南充</a>
+                        <a>南京</a>
+                        <a>南宁</a>
+                        <a>南通</a>
+                        <a>南阳</a>
+                        <a>内江</a>
+                        <a>宁波</a>
+                        <a>宁德</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>P</span>
+                    <div class="clearfix">
+                        <a>平顶山</a>
+                        <a>莆田</a>
+                        <a>濮阳</a>
+                        <a>平度</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>Q</span>
+                    <div class="clearfix">
+                        <a>青岛</a>
+                        <a>清远</a>
+                        <a>秦皇岛</a>
+                        <a>齐齐哈尔</a>
+                        <a>泉州</a>
+                        <a>曲靖</a>
+                        <a>衢州</a>
+                        <a>綦江</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>R</span>
+                    <div class="clearfix">
+                        <a>日照</a>
+                       
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>S</span>
+                    <div class="clearfix">
+                        <a>上海</a>
+                        <a>商丘</a>
+                        <a>汕头</a>
+                        <a>绍兴</a>
+                        <a>邵阳</a>
+                        <a>沈阳</a>
+                        <a>深圳</a>
+                        <a>石家庄</a>
+                        <a>十堰</a>
+                        <a>松原</a>
+                        <a>遂宁</a>
+                        <a>随州</a>
+                        <a>宿迁</a>
+                        <a>苏州</a>
+                        <a>宿州</a>
+                        
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>T</span>
+                    <div class="clearfix">
+                        <a>泰安</a>
+                        <a>太原</a>
+                        <a>台州</a>
+                        <a>泰州</a>
+                        <a>唐山</a>
+                        <a>天津</a>
+                        <a>铜陵</a>
+                        <a>太仓</a>
+                        <a>塘沽</a>
+                       
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>W</span>
+                    <div class="clearfix">
+                        <a>潍坊</a>
+                        <a>威海</a>
+                        <a>渭南</a>
+                        <a>温州</a>
+                        <a>武汉</a>
+                        <a>芜湖</a>
+                        <a>乌鲁木齐</a>
+                        <a>无锡</a>
+                        <a>瓦房店</a>
+                        <a>万州</a>
+                        <a>吴江</a>
+                        <a>武清</a>
+                      
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>X</span>
+                    <div class="clearfix">
+                        <a>厦门</a>
+                        <a>西安</a>
+                        <a>湘潭</a>
+                        <a>襄阳</a>
+                        <a>咸宁</a>
+                        <a>孝感</a>
+                        <a>邢台</a>
+                        <a>西宁</a>
+                        <a>新乡</a>
+                        <a>信阳</a>
+                        <a>宣城</a>
+                        <a>许昌</a>
+                        <a>徐州</a>
+                      
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>Y</span>
+                    <div class="clearfix">
+                        <a>盐城</a>
+                        <a>阳江</a>
+                        <a>扬州</a>
+                        <a>烟台</a>
+                        <a>宜宾</a>
+                        <a>宜昌</a>
+                        <a>宜春</a>
+                        <a>银川</a>
+                        <a>营口</a>
+                        <a>益阳</a>
+                        <a>岳阳</a>
+                        <a>玉溪</a>
+                        <a>运城</a>
+                        <a>义乌</a>
+                        <a>宜兴</a>
+                        <a>永川</a>
+                        <a>云阳</a>
+                       
+                    </div>
+                </li>
+                <li class="clearfix">
+                    <span>Z</span>
+                    <div class="clearfix">
+                        <a>枣庄</a>
+                        <a>漳州</a>
+                        <a>湛江</a>
+                        <a>肇庆</a>
+                        <a>郑州</a>
+                        <a>镇江</a>
+                        <a>中山</a>
+                        <a>珠海</a>
+                        <a>驻马店</a>
+                        <a>株洲</a>
+                        <a>淄博</a>
+                        <a>自贡</a>
+                        <a>资阳</a>
+                        <a>遵义</a>
+                        <a>张家港</a>
+                    </div>
+                </li>
+            </ul>  
+        </div>
+        <script src="js/city.js"></script>
+        <nav class="head1-nav1 clearfix">
+            <a href="http://localhost:8080/">首页</a>
+            <a class="active3">我要买车</a>
+            <a>我要卖车</a>
+            <a>瓜子服务</a>
+            <a>瓜子金融</a>
+            <a>毛豆新车</a>
+        </nav>
+        <script src="js/top.js"></script>
+        <nav class="head1-nav2 clearfix">
+            <a href="http://localhost:8080/login.html"><i></i>登录</a>
+            <span class="line"></span>
+            <a href="http://localhost:8080/register.html"><i></i>注册</a>
+        </nav>
+    </div>
+</body>
+</html>

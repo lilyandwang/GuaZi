@@ -42,6 +42,7 @@ gulp.task("html", ()=>{
 gulp.task("img", ()=>{
     return gulp.src("img/*").pipe(gulp.dest("dist/img")).pipe(connect.reload());;
 })
+
 gulp.task("ico", ()=>{
     return gulp.src("*.ico").pipe(gulp.dest("dist/")).pipe(connect.reload());;
 })

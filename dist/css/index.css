@@ -214,12 +214,13 @@
     margin-top: 28px;
     height: 32px;
     cursor: pointer; }
-    .head1-nav1 a:first-child {
-      border-bottom: 3px solid #22ac38; }
     .head1-nav1 a:last-child {
       margin-right: 0; }
     .head1-nav1 a:hover {
       color: #22ac38; }
+  .head1-nav1 .active3 {
+    color: #22ac38;
+    border-bottom: 3px solid #22ac38; }
 
 .head1-nav2 {
   float: right;

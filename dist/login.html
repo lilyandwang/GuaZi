@@ -7,21 +7,24 @@
     <title>瓜子二手登录</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/login.js"></script>
 </head>
 <body>
     <section class="wrap">
         <div class="box1 clearfix">
             <h2>瓜子二手车直卖网</h2>
-            <span class="close"><img src="img/close.png"></span>
+            <a class="close" href="http://localhost:8080/"><img src="img/close.png"></a>
         </div>
         <div class="box2">
             <p class="clearfix">
                 <span>手机号码</span>
-                <input type="text" placeholder="请输入您的手机号码" class="number" name="">
+                <input type="text" placeholder="请输入您的手机号码" id="phone" name="">
             </p>
             <p class="clearfix">
                 <span>密码</span>
-                <input type="password" placeholder="请输入密码" class="pwd" name="">
+                <input type="password" placeholder="请输入密码" id="password" name="">
             </p>
         </div>
         <button class="box3">

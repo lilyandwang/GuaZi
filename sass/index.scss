@@ -231,6 +231,7 @@
     float: left;
     margin-left: 170px;
     padding-bottom: 3px;
+    
     a {
       float: left;
       width: auto;
@@ -241,15 +242,19 @@
       margin-top: 28px;
       height: 32px;
       cursor: pointer;
-      &:first-child {
-        border-bottom: 3px solid #22ac38;
-      }
+      // &:first-child {
+      //   border-bottom: 3px solid #22ac38;
+      // }
       &:last-child {
         margin-right: 0;
       }
       &:hover {
         color: #22ac38;
       }
+    }
+    .active3{
+      color: #22ac38;
+      border-bottom: 3px solid #22ac38;
     }
   }
   .head1-nav2 {

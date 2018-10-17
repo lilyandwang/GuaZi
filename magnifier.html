@@ -7,7 +7,9 @@
     <title>瓜子二手车直买网详情页及放大镜</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/magnifier.css">
+    <link rel="stylesheet" href="css/swiper.min2.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
     <!-- 顶部 -->
@@ -439,5 +441,79 @@
             <a href="http://localhost:8080/register.html"><i></i>注册</a>
         </nav>
     </div>
+    <!------------------ 第一部分 轮播图那一大块-->
+    <section id="section1">
+        <div class="wrap1">
+            <div class="wrap1-left">
+                <p>首页> 北京二手车> 北京北京二手车> 北京二手北京北京BJ80></p>
+                <span> 北京BJ80 2016款 2.3T 自动尊贵版</span>
+            </div>
+            <div class="wrap1-right">
+                <p>车源号：HC-54258460</p>
+                <p><i></i><span>车源信息纠错</span></p>
+            </div>
+        </div>
+        <div class="wrap2">
+            <!-- 轮播图 -->
+                <!-- Swiper -->
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(img/banner1-b.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner2-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner3-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner4-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner5-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner6-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner7-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner8-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner9-big.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner10-big.jpg)"></div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next swiper-button-white"></div>
+                <div class="swiper-button-prev swiper-button-white"></div>
+            </div>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image:url(img/banner1-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner2-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner3-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner4-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner5-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner6-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner7-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner8-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner9-small.jpg)"></div>
+                <div class="swiper-slide" style="background-image:url(img/banner10-small.jpg)"></div>
+                </div>
+            </div>
+                 <!-- Initialize Swiper -->
+            <script src="js/swiper.min2.js"></script>
+        <script>
+            var galleryThumbs = new Swiper('.gallery-thumbs', {
+                spaceBetween: 10,
+                slidesPerView: 4,
+                freeMode: true,
+                watchSlidesVisibility: true,
+                watchSlidesProgress: true,
+            });
+            var galleryTop = new Swiper('.gallery-top', {
+                spaceBetween: 10,
+                navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+                },
+                thumbs: {
+                swiper: galleryThumbs
+                }
+            });
+            </script>
+    
+            <!-- 详情 -->
+            <div class="wrap2-details">
+
+            </div>
+        </div>
+    </section>
 </body>
 </html>

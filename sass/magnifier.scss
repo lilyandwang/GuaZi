@@ -1,0 +1,489 @@
+html,body{
+    background: #fff;
+}
+// /* 侧栏 */
+#right-nav{
+	width:40px;
+	height: 100%;
+	position: fixed;
+	top:0;
+	right:0;
+  z-index: 10;
+  background: #2a2c37;
+}
+#right-nav .w{
+	position: fixed;
+	bottom:40px;
+	right:0;
+	width:40px;
+	height: 60%;
+}
+#right-nav-list1{
+	position: relative;
+	right: 0;
+	top: 0;
+	z-index: 10;
+}
+#right-nav li a{
+	display: block;
+  background:url(../img/script-foot.png) no-repeat center;
+  box-sizing: border-box;
+  padding-left: 10px;
+  position: relative;
+	left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+#right-nav li{
+	position: relative;
+	left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+	height: 45px;
+  width: 40px;
+  &:nth-child(1) a{
+    width: 15px;
+    height: 15px;
+    background-position: -48px -2px;
+    &:hover{
+      background-position: 0 -2px;
+    }
+  }
+  &:nth-child(2) a{
+    width: 17px;
+    height: 14px;
+    background-position: -48px -33px;
+    &:hover{
+      background-position: 0 -33px;
+    }
+  }
+  &:nth-child(3) a{
+    width: 14px;
+    height: 13px;
+    background-position: -48px -65px;
+    &:hover{
+      background-position: 0 -65px;
+    }
+  }
+  &:nth-child(4) a{
+    width: 14px;
+    height: 14px;
+    background-position: -48px -96px;
+    &:hover{
+      background-position: 0 -96px;
+    }
+  }
+  &:nth-child(5) a{
+    width: 15px;
+    height: 14px;
+    background-position: -48px -132px;
+    &:hover{
+      background-position: 0 -132px;
+    }
+  }
+  .nav-hide{
+    display: none;
+    width: 15px;
+    height: 12px;
+    background-position: -48px -160px;
+    &:hover{
+      background-position: 0 -160px;
+    }
+  }
+}
+
+#right-nav li div{
+  width: auto;
+  height: auto;
+	position: absolute;
+	left:40px;
+	top: -10px;
+	z-index: -1;
+	font-size: 10px;
+	background: #fff;
+	color: #495056;
+  // padding: 10px 50px;
+	text-align: center;
+  border-radius: 3px;
+  box-shadow:  0 0 4px #495056;
+}
+#right-nav li:nth-child(1):hover div,#right-nav li:nth-child(2):hover div{
+  left:-260px;
+  top: -80px;
+}
+#right-nav li:nth-child(3):hover div{
+  left:-170px;
+  top: -10px;
+  padding: 10px 50px;
+}
+#right-nav li:nth-child(4):hover div{
+  left:-250px;
+  top: -10px;
+  padding: 10px 50px;
+}
+/* ---------------head------------------ */
+/* 头部的nav */
+.kong{
+    width:100%;
+    height: 63px;
+    position: absolute;
+    border-bottom: 2px solid #e6e6e6;
+}
+#head1 {
+    width: 1200px;
+    height: 64px;
+    // position: absolute;
+    // z-index: 10;
+    // left: 0;
+    // right:0;
+    margin:0 auto;
+  }
+  .head1-logo {
+    width: 64px;
+    height: 64px;
+    background: url(../img/script-head.png) no-repeat;
+    background-position: -181px -33px;
+    float: left;
+    display: block;
+  }
+  .head1-city {
+    display: block;
+    width: 44px;
+    height: 12px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 17px;
+    padding: 16px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #495056;
+    text-align: left;
+    cursor: pointer;
+    
+    i {
+      width: 11px;
+      height: 6px;
+      float: right;
+      background: url( ../img/script-head.png) no-repeat right;
+      background-position: -265px -35px;
+      margin-top: 3px;
+    }
+    &:hover {
+      color: #22ac38;
+      i {
+        background-position: -284px -35px;
+      }
+      
+    }
+  }
+.active{
+    background: #fff;
+    color: #495056;
+}
+  // 当鼠标移上北京的时候出现的地点
+.head1-city-hide{
+  width: 770px;
+  height: 354px;
+  position: absolute;
+  top: 50px;
+  left: 78px;
+  border: 1px solid #e6e6e6;
+  border-top: none;
+  z-index: 20;
+  background: #fff;
+  display: none;
+  padding: 18px 0;
+  overflow: auto;
+  li{
+    height: auto;
+    border-bottom: 1px solid #e6e6e6;
+    padding: 10px 17px;
+    span{
+      display: block;
+      font-size: 12px;
+      float: left;
+      height: 20px;
+      line-height: 20px;
+      color: #a5abb2;
+      width: 40px;
+      text-align: center;
+    }
+    div{
+      width: 650px;
+      float: left;
+       a{
+        height: 20px;
+        line-height: 20px;
+        display: block;
+        font-size: 13px;
+        color: #495056;
+        width: auto;
+        float: left;
+        margin-left: 16px;
+        cursor: pointer;
+        &:hover{
+          color: #22ac38;
+        }
+      }
+    }
+     
+    
+  }
+}
+  .head1-nav1 {
+    width: 577px;
+    height: 61px;
+    float: left;
+    margin-left: 170px;
+    padding-bottom: 3px;
+    a {
+      float: left;
+      width: auto;
+      display: block;
+      font-size: 12px;
+      color: #333;
+      margin-right: 54px;
+      margin-top: 28px;
+      height: 32px;
+      cursor: pointer;
+     
+      &:last-child {
+        margin-right: 0;
+      }
+      &:hover {
+        color: #22ac38;
+      }
+    }
+    .active3{
+      color: #22ac38;
+      border-bottom: 3px solid #22ac38;
+    }
+  }
+  .head1-nav2 {
+    float: right;
+    width: 261px;
+    height: 64px;
+    a {
+      cursor: pointer;
+        display: block;
+        width: 46px;
+        height: 15px;
+        line-height: 15px;
+        padding: 28px 0 21px 0;
+        float: left;
+        font-size: 12px;
+        color: #495056;
+        text-align: right;
+        i {
+          width: 14px;
+          height: 15px;
+          background: url( ../img/script-head.png) no-repeat center 5px;
+          background-position: 0 -213px;
+          display: block;
+          float: left;
+        }
+        &:hover {
+          color: #22ac38;
+          i {
+            background-position: 0 -241px;
+          }
+        
+      }
+    }
+    .line {
+      width: 1px;
+      height: 18px;
+      background: #8c898c;
+      margin: 28px 25px 0 20px;
+      float: left;
+    }
+  }
+//置顶
+.to-top{
+  height: 48px;
+  width: 100%;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 48px;
+  display: none;
+  position: fixed;
+  top: 0;
+  .towrap{
+    width: 1200px;
+    height: 48px;
+    margin: 0 auto;
+    .top-left{
+      float: left;
+  .fenlei{
+    width: 142px;
+    height: 28px;
+    float: left;
+    margin-right: 15px;
+    p{
+      font-size: 13px;
+      color:#7a838d;
+      float: left;
+      height: 48px;
+      line-height: 48px;
+      padding-right:4px;
+    }
+    select{
+      width: 80px;
+      height: 26px;
+      border:none;
+      outline: none;
+      border: 1px solid #e6e6e6;
+      color: #495056;
+    }
+  }
+  .all{
+      width: 45px;
+      height: 48px;
+      float: left;
+    span{
+      display: block;
+      font-size: 12px;
+      color: #495056;
+      height: 48px;
+      line-height: 48px;
+      float: left;
+    }
+    i{
+      float: right;
+      width: 12px;
+      height: 6px;
+      display: block;
+      background: url(../img/icon-page.png) no-repeat center;
+      background-position:-40px 0;
+      margin-top: 22px;
+    }
+  }
+  &:hover{
+    i{
+      background-position: -40px -20px;
+    }
+    span{
+      color: #22ac38;
+    }
+  }
+} 
+.top-right{
+   font-size:12px;
+    color:#495056;
+    float: right;
+}
+}
+}
+//   第一部分 轮播图那一大块
+#section1{
+    height: 690px;
+    width: 1200px;
+    margin: 0 auto;
+    .wrap1{
+        height: 62px;
+        width: 1200px;
+        .wrap1-left{
+            width:590px;
+            height: 62px;
+            line-height: 62px;
+            float: left;
+            p{
+                font-size: 12px;
+                color: #495056;
+                float: left;
+            }
+            span{
+                display: block;
+                font-size: 12px;
+                color: #a5abb2;
+                float: left;
+            }
+        }
+        .wrap1-right{
+            height: 62px;
+            width: 280px;
+            line-height: 62px;
+            float: right;
+            p{
+                &:first-of-type{
+                    font-size: 12px;
+                    color: #495056;
+                    height: 62px;
+                    line-height: 62px;
+                    float: left;
+                    width: 140px;
+                }
+                &:last-of-type{
+                    border: 1px solid #e6e6e6;
+                    width: 100px;
+                    height: 26px;
+                    border-radius: 3px;
+                    margin-top: 17px;
+                    float: right;
+                    i{
+                        display: block;
+                        width: 16px;
+                        height: 15px;
+                        background: url(../img/icon-page.png) no-repeat center;
+                        background-position: -9px -38px;
+                        float: left;
+                        margin: 6px 0 0 4px;
+                    }
+                    span{
+                        display: block;
+                        font-size: 12px;
+                        color: #495056;
+                        height: 26px;
+                        line-height: 26px;
+                        float: right;
+                        margin-right: 2px;
+                    }
+                    &:hover{
+                        border: 1px solid #22ac38;
+                     }
+                }
+                
+            }
+        }
+    }
+    .wrap2{
+        width: 1200px;
+        height: 537px;
+        
+        .wrap2-details{
+
+        }
+    }
+}
+// 轮播的css样式
+.swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery-top {
+    height: 80%;
+    width: 100%;
+  }
+  .gallery-thumbs {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  .gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .gallery-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }

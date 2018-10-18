@@ -175,142 +175,136 @@ html, body {
   width: 1200px;
   height: 64px;
   margin: 0 auto; }
-
-.head1-logo {
-  width: 64px;
-  height: 64px;
-  background: url(../img/script-head.png) no-repeat;
-  background-position: -181px -33px;
-  float: left;
-  display: block; }
-
-.head1-city {
-  display: block;
-  width: 44px;
-  height: 12px;
-  float: left;
-  margin-left: 15px;
-  margin-top: 17px;
-  padding: 16px;
-  line-height: 12px;
-  font-size: 12px;
-  color: #495056;
-  text-align: left;
-  cursor: pointer; }
-  .head1-city i {
-    width: 11px;
-    height: 6px;
-    float: right;
-    background: url(../img/script-head.png) no-repeat right;
-    background-position: -265px -35px;
-    margin-top: 3px; }
-  .head1-city:hover {
-    color: #22ac38; }
-    .head1-city:hover i {
-      background-position: -284px -35px; }
-
-.active {
-  background: #fff;
-  color: #495056; }
-
-.head1-city-hide {
-  width: 770px;
-  height: 354px;
-  position: absolute;
-  top: 50px;
-  left: 78px;
-  border: 1px solid #e6e6e6;
-  border-top: none;
-  z-index: 20;
-  background: #fff;
-  display: none;
-  padding: 18px 0;
-  overflow: auto; }
-  .head1-city-hide li {
-    height: auto;
-    border-bottom: 1px solid #e6e6e6;
-    padding: 10px 17px; }
-    .head1-city-hide li span {
-      display: block;
-      font-size: 12px;
-      float: left;
-      height: 20px;
-      line-height: 20px;
-      color: #a5abb2;
-      width: 40px;
-      text-align: center; }
-    .head1-city-hide li div {
-      width: 650px;
-      float: left; }
-      .head1-city-hide li div a {
-        height: 20px;
-        line-height: 20px;
-        display: block;
-        font-size: 13px;
-        color: #495056;
-        width: auto;
-        float: left;
-        margin-left: 16px;
-        cursor: pointer; }
-        .head1-city-hide li div a:hover {
-          color: #22ac38; }
-
-.head1-nav1 {
-  width: 577px;
-  height: 61px;
-  float: left;
-  margin-left: 170px;
-  padding-bottom: 3px; }
-  .head1-nav1 a {
+  #head1 .head1-logo {
+    width: 64px;
+    height: 64px;
+    background: url(../img/script-head.png) no-repeat;
+    background-position: -181px -33px;
     float: left;
-    width: auto;
+    display: block; }
+  #head1 .head1-city {
     display: block;
-    font-size: 12px;
-    color: #333;
-    margin-right: 54px;
-    margin-top: 28px;
-    height: 32px;
-    cursor: pointer; }
-    .head1-nav1 a:last-child {
-      margin-right: 0; }
-    .head1-nav1 a:hover {
-      color: #22ac38; }
-  .head1-nav1 .active3 {
-    color: #22ac38;
-    border-bottom: 3px solid #22ac38; }
-
-.head1-nav2 {
-  float: right;
-  width: 261px;
-  height: 64px; }
-  .head1-nav2 a {
-    cursor: pointer;
-    display: block;
-    width: 46px;
-    height: 15px;
-    line-height: 15px;
-    padding: 28px 0 21px 0;
+    width: 44px;
+    height: 12px;
     float: left;
+    margin-left: 15px;
+    margin-top: 17px;
+    padding: 16px;
+    line-height: 12px;
     font-size: 12px;
     color: #495056;
-    text-align: right; }
-    .head1-nav2 a i {
-      width: 14px;
-      height: 15px;
-      background: url(../img/script-head.png) no-repeat center 5px;
-      background-position: 0 -213px;
-      display: block;
-      float: left; }
-    .head1-nav2 a:hover {
+    text-align: left;
+    cursor: pointer; }
+    #head1 .head1-city i {
+      width: 11px;
+      height: 6px;
+      float: right;
+      background: url(../img/script-head.png) no-repeat right;
+      background-position: -265px -35px;
+      margin-top: 3px; }
+    #head1 .head1-city:hover {
       color: #22ac38; }
-      .head1-nav2 a:hover i {
-        background-position: 0 -241px; }
-  .head1-nav2 .line {
-    width: 1px;
-    height: 18px;
-    background: #8c898c;
-    margin: 28px 25px 0 20px;
-    float: left; }
+      #head1 .head1-city:hover i {
+        background-position: -284px -35px; }
+  #head1 .active1 {
+    background: #fff;
+    color: #495056; }
+  #head1 .head1-city-hide {
+    width: 770px;
+    height: 354px;
+    position: absolute;
+    top: 63px;
+    left: 258px;
+    border: 1px solid #e6e6e6;
+    border-top: none;
+    z-index: 20;
+    background: #fff;
+    display: none;
+    padding: 18px 0;
+    overflow: auto; }
+    #head1 .head1-city-hide li {
+      height: auto;
+      border-bottom: 1px solid #e6e6e6;
+      padding: 10px 17px; }
+      #head1 .head1-city-hide li span {
+        display: block;
+        font-size: 12px;
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        color: #a5abb2;
+        width: 40px;
+        text-align: center; }
+      #head1 .head1-city-hide li div {
+        width: 650px;
+        float: left; }
+        #head1 .head1-city-hide li div a {
+          height: 20px;
+          line-height: 20px;
+          display: block;
+          font-size: 13px;
+          color: #495056;
+          width: auto;
+          float: left;
+          margin-left: 16px;
+          cursor: pointer; }
+          #head1 .head1-city-hide li div a:hover {
+            color: #22ac38; }
+  #head1 .head1-nav1 {
+    width: 577px;
+    height: 61px;
+    float: left;
+    margin-left: 170px;
+    padding-bottom: 3px; }
+    #head1 .head1-nav1 a {
+      float: left;
+      width: auto;
+      display: block;
+      font-size: 12px;
+      color: #333;
+      margin-right: 54px;
+      margin-top: 28px;
+      height: 32px;
+      cursor: pointer; }
+      #head1 .head1-nav1 a:last-child {
+        margin-right: 0; }
+      #head1 .head1-nav1 a:hover {
+        color: #22ac38; }
+    #head1 .head1-nav1 .active3 {
+      color: #22ac38;
+      border-bottom: 3px solid #22ac38; }
+  #head1 .head1-nav2 {
+    float: right;
+    width: 261px;
+    height: 64px; }
+    #head1 .head1-nav2 a {
+      cursor: pointer;
+      display: block;
+      width: 46px;
+      height: 15px;
+      line-height: 15px;
+      padding: 28px 0 21px 0;
+      float: left;
+      font-size: 12px;
+      color: #495056;
+      text-align: right; }
+      #head1 .head1-nav2 a i {
+        width: 14px;
+        height: 15px;
+        background: url(../img/script-head.png) no-repeat center 5px;
+        background-position: 0 -213px;
+        display: block;
+        float: left; }
+      #head1 .head1-nav2 a:hover {
+        color: #22ac38; }
+        #head1 .head1-nav2 a:hover i {
+          background-position: 0 -241px; }
+    #head1 .head1-nav2 .line {
+      width: 1px;
+      height: 18px;
+      background: #8c898c;
+      margin: 28px 25px 0 20px;
+      float: left; }
 
 .to-top {
   height: 48px;

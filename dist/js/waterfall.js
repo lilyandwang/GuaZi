@@ -32,7 +32,7 @@ $.extend(WaterFall.prototype,{
         var html = "";
         for(var i = 0 ; i < json.length ; i ++){
             html += `  <div class="box">
-                            <img src="${json[i].image}" alt="">
+                            <a href="http://localhost:8080/magnifier.html"><img src="${json[i].image}" alt=""></a>
                             
                             <div class="tab-p">
                                 <span class="span1">大众 途观 2012款 1.8TSI 自动四驱风尚版</span>
@@ -40,7 +40,7 @@ $.extend(WaterFall.prototype,{
                                 <div>
                                     <span class="span3">12.42万</span>
                                     <span class="span4">27.20万</span>
-                                    <span class="span5">严选车</span>
+                                    <span class="span5">加入购物车</span>
                                 </div>
                             </div>
                        </div>

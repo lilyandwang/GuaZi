@@ -110,12 +110,17 @@ html,body{
 	text-align: center;
   border-radius: 3px;
   box-shadow:  0 0 4px #495056;
+  span{
+    font-size: 13px;
+    color: #f00;
+    margin: 5px;
+  }
 }
 #right-nav li:nth-child(1):hover div,#right-nav li:nth-child(2):hover div{
   left:-260px;
   top: -80px;
 }
-#right-nav li:nth-child(3):hover div{
+#right-nav li:nth-child(3):hover div,#right-nav li:nth-child(5):hover div{
   left:-170px;
   top: -10px;
   padding: 10px 50px;
@@ -646,7 +651,7 @@ html,body{
               }
               .span5{
                 display: block;
-                width: 46px;
+                width: 66px;
                 height: 21px;
                 background: #fcf2d5;
                 font-size: 11px;
@@ -654,7 +659,9 @@ html,body{
                 text-align: center;
                 line-height: 21px;
                 float: right;
+                cursor: pointer;
               }
+
             }
           }   
         

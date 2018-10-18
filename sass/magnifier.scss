@@ -1,6 +1,68 @@
 html,body{
     background: #fff;
 }
+// 吸顶
+.totop{
+   width: 100%;
+   height: 64px;
+   position: fixed;
+   top: 0;
+   z-index: 60;
+   display: none;
+   background: #fff;
+   border-bottom: 1px solid #e7e7e7;
+   .top-center{
+     width: 1200px;
+     height: 64px;
+     margin: 0 auto;
+     .top-left{
+       width: 584px;
+       height: 64px;
+       float: left;
+       li{
+         font-size: 19px;
+         color:#495056;
+         margin: 0 10px;
+         float: left;
+         height: 64px;
+         line-height: 64px;
+       }
+     }
+     .topright{
+        height: 48px;
+        margin-top: 10px;
+        width: 550px;
+        float: right;
+        button{
+            width: 172px;
+            height: 48px;
+            font-size: 19px;
+            text-align: center;
+            line-height: 48px;
+            float: left;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            display: block;   
+            &:nth-of-type(1){
+                color: #fff;
+                background: #fd6c34;
+            }
+            &:nth-of-type(2){
+                color: #fff;
+                background: #2abd53;
+                margin:0 10px;
+            }
+            &:nth-of-type(3){
+                color: #2abd53;
+                border:1px solid #22ac38;
+                background: #fff;
+            } 
+        }
+     }
+   }
+}
+
 // /* 侧栏 */
 #right-nav{
 	width:40px;
@@ -380,7 +442,7 @@ html,body{
 }
 //   第一部分 轮播图那一大块
 #section1{
-    height: 690px;
+    height: auto;
     width: 1200px;
     margin: 0 auto;
     .wrap1{
@@ -927,6 +989,234 @@ html,body{
         }
       }
     }
+}
+//foot
+footer{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #2a2c37;
+  padding: 50px 0 30px;
+}
+
+.foot-bottom{
+  height: auto;
+  width: 1195px;
+  margin: 0 auto;
+  .foot-bottom1{
+    height: 120px;
+    width: 100%;
+    .bottom1-box1{
+      display: block;
+      width: 100px;
+      height: 90px;
+      background: url(../img/global.png) no-repeat top;
+      background-position: -155px -100px;
+      margin-left: 40px;
+      float: left;
+    }
+    .bottom1-box2{
+      width: 356px;
+      height: 120px;
+      float: left;
+      margin-left: 30px;
+      p{
+        color:#b8b8b8;
+        font-size: 13px;
+        height: 12px;
+        line-height: 12px;
+        &:nth-child(1){
+          margin-top: 6px;
+        }
+        &:nth-child(2){
+          margin-top: 12px;
+        }
+        &:nth-child(3){
+          margin-top: 28px;
+        }
+        &:nth-child(4){
+          margin-top: 10px;
+        }
+      }
+    }
+    .bottom1-box3{
+      width: 200px;
+      float: left;
+      margin-left: 22px;
+      span{
+        display: block;
+        width: 85px;
+        height: 103px;
+        p{
+          font-size: 12px;
+          color: #b8b8b8;
+          height: 12px;
+          line-height: 12px;
+          margin-top: 6px;
+          text-align: center;
+        }
+        &:nth-child(1){
+          float: left;
+          i{
+            display: block;
+            width: 85px;
+            height: 85px;
+            background: url(../img/script-foot.png) no-repeat top;
+            background-position: -101px -40px; 
+          }
+        }
+        &:nth-child(2){
+          float: left;
+          margin-left: 30px;
+          i{
+            display: block;
+            width: 85px;
+            height: 85px;
+            background: url(../img/script-foot.png) no-repeat top;
+            background-position: -101px -138px; 
+          }
+        }
+      }
+    }
+    .bottom1-box4{
+      width: 382px;
+      height: 120px;
+      float: left;
+      margin-left: 50px;
+      ul{
+        width: 382px;
+        margin-top: 6px;
+        height: 35px;
+        li{
+          height: 14px;
+          float: left;
+          margin-right: 9px;
+          a{
+            display: block;
+            font-size: 12px;
+            color: #b8b8b8;
+            height: 14px;
+            line-height: 14px;
+            cursor: pointer;
+            &:hover{
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      p{
+        font-size: 10px;
+        color:#b8b8b8;
+        &:nth-child(2){
+          margin-top: 10px;    
+        }
+        &:nth-child(3){
+          margin-top: 6px;
+        }
+        &:nth-child(4){
+          margin-top: 5px;
+           i{
+             width: 18px;
+             height: 20px;
+             background: url(../img/icon-foot.png) no-repeat left; 
+             background-position: 0 -62px;
+             display: block;
+             float: left;
+             padding-right: 5px;
+           }
+           a{
+             float: left;
+             display: block;
+             font-size: 11px;
+             color: #b8b8b8;
+           }
+        }
+      }
+    }
+  }
+  .foot-bottom2{
+    width: 1198px;
+    height: auto;
+    margin: 44px auto 0;
+    // position: relative;
+    ul{
+      width: 100%;
+      height: auto;
+      color: #666;
+      // float: left;
+      li{
+        height: auto;
+        div{
+          height: 30px;
+          line-height: 30px;
+          i{
+            width: 18px;
+            height: 9px;
+            background:url(../img/global.png) no-repeat center right ;
+            background-position: -70px -100px;
+            margin-top: 5px;
+            float: right;
+            &:active{
+              background-position: -90px -100px;
+            }
+          }
+          span{
+            display: block;
+            float: left;
+            font-size: 15px;
+          }
+          dd{
+            float: left;
+            a{
+              display: block;
+              float: left;
+              font-size: 12px;
+              margin-left: 25px;
+              cursor: pointer;
+              &:first-of-type{
+                margin-left: 15px;
+              }
+              &:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        .open-box{
+          width: 1050px;
+          height: auto;
+          padding-left: 60px;
+          display: none;
+         
+          // float: right;
+          a{
+            display: block;
+            font-size: 10px;
+            color: #666;
+            float: left;
+            height: 30px;
+            line-height: 30px;
+            margin-left: 25px;
+            // &:first-of-type{
+              // margin-left: 0;
+            // }
+          }
+        }
+        
+      }
+    }
+    p{
+      font-size: 9px;
+      color: #666;
+      height: 10px;
+      line-height: 10px;
+      text-align: center;
+      width: 100%;
+      // position: absolute;
+      // bottom: 20px;
+      margin: 30px auto 0;
+    }
+  }
 }
 
 

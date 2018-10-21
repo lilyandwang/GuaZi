@@ -8,7 +8,6 @@ $(function(){
             .then(function(res){
                 console.log(res);
                 window.location.href = "http://localhost:8080/";
-                // window.open("http://localhost:8080/");
             })
         return false;
     })

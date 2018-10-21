@@ -1,37 +1,34 @@
 function WaterFall(){}
 $.extend(WaterFall.prototype,{
     init:function(){
-
+        // 页数;
         this.page = 1;
-
-        this.main = $("#waterfall .box");
- 
+        // 结构外包围;
+        this.main = $("#waterfall");
+        // 是否在加载中;
         this.loading = false;
-
         this.loadJson()
         .done(function(res){
-            this.json = res.subjects;
             this.renderPage(res);
         })
-
-        this.bindEvent();
         this.listSum();
+        this.bindEvent();
     },
     loadJson:function(){
         var opt = {
             url:"http://www.wookmark.com/api/json/popular",
+            type:"GET",
             dataType:"jsonp",
             data:{page:this.page},
-           
             context:this
         }
         return $.ajax(opt);
     },
     renderPage:function(json){
-     
-        var html = "";
+        // console.log(json);
+        var html1 = "";
         for(var i = 0 ; i < json.length ; i ++){
-            html += `  <div class="box">
+            html1 += `  <div class="box">
                             <a href="http://localhost:8080/magnifier.html"><img src="${json[i].image}" alt=""></a>
                             
                             <div class="tab-p">
@@ -46,128 +43,121 @@ $.extend(WaterFall.prototype,{
                        </div>
                     `
         }
-        this.main.html(this.main.html() + html);
-      
+        this.main.html(this.main.html() + html1);
+        // this.sortPage();
     },
-  
-    bindEvent(){
-        $(window).on("scroll",this.ifLoad.bind(this));
+    bindEvent:function(){
         $("#waterfall .box").on("click","button",this.addCar.bind(this));
+        $(".empty").on("mouseenter",this.showList.bind(this));
+        $(".empty").on("mouseleave",function(){
+            $(".goods-list").children().remove();
+        });
+        $(".empty").on("click",function(event){
+            var target = event.target ; 
+            if(target != $(".empty")[0]) return 0;
 
-                $(".gwc>div").on("mouseenter",this.showList.bind(this));
-                $(".gwc>div").on("mouseleave",function(){
-                    $(".goods-list").children().remove();
-                });
-                $(".gwc>div").on("click",function(event){
-                    var target = event.target ; 
-                    if(target != $(".gwc>div")[0]) return 0;
-
-                    $.removeCookie("gwc");
-                    // 执行鼠标移出事件;
-                    $(".gwc>div").triggerHandler("mouseleave");
-                    this.listSum();
-                }.bind(this));
-            },
-            addCar:function(event){
-                // 我怎么知道把谁加入到购物车之中那?;
-                var target = event.target ;
-                var goodsId = $(target).attr("data-id");
-                
-                var cookie;
-                if((cookie = $.cookie("gwc"))){
-                    // 将字符串转换为数组, 方便插入操作;
-                    // console.log(cookie);
-                    var cookieArray = JSON.parse(cookie);
-                    // 判定当前要添加的商品 是否已经存在在购物车里;
-                    // 表示是否存在商品;
-                    var hasGoods = false;
-                    for(var i = 0 ; i < cookieArray.length ; i ++){
-                        if(cookieArray[i].id == goodsId ) {
-                            // 存在 商品;
-                            hasGoods = true;
-                            cookieArray[i].num ++;
-                            break;
-                        }
-                    }
-                    // 如果没有商品;
-                    if(hasGoods == false){
-                        var goods = {
-                            id : goodsId,
-                            num : "1"
-                        }
-                        cookieArray.push(goods);
-                    }
-
-                    // 将数组 转为字符串 方便 储存cookie;
-
-                    // console.log(JSON.stringify(cookieArray));
-                    $.cookie("gwc",JSON.stringify(cookieArray));
-                }else{
-                    $.cookie("gwc",`[{"id":"${goodsId}","num":"1"}]`);
+            $.removeCookie("shopCar");
+            // 执行鼠标移出事件;
+            $(".empty").triggerHandler("mouseleave");
+            this.listSum();
+        }.bind(this));
+        $(window).on("scroll",this.ifLoad.bind(this));
+    },
+    addCar:function(event){
+        // 我怎么知道把谁加入到购物车之中那?;
+        var target = event.target ;
+        var goodsId = $(target).attr("data-id");
+        var cookie;
+        if((cookie = $.cookie("shopCar"))){
+            
+            var cookieArray = JSON.parse(cookie);
+            
+            var hasGoods = false;
+            for(var i = 0 ; i < cookieArray.length ; i ++){
+                if(cookieArray[i].id == goodsId ) {
+                    
+                    hasGoods = true;
+                    cookieArray[i].num ++;
+                    break;
                 }
-                console.log($.cookie("gwc"));
-                this.listSum();
             }
-            ,
-            showList:function(event){
-                // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
-                var target = event.target;
-
-                if(target != $(".gwc>div")[0]) return 0;
-
-                var cookie;
-                if(!(cookie = $.cookie("gwc"))){ return 0; };
-                var cookieArray = JSON.parse(cookie);
-
-                var html = "";
-                // for 购物车里有多少商品就拼接多少个;
-                for(var i = 0 ; i < cookieArray.length ; i ++){
-                    // console.log(cookieArray[i]);
-                    // for 判断哪一个商品是购物车里的商品;
-                    for(var j = 0 ; j < this.json.length ; j ++){
-                        if(cookieArray[i].id == this.json[j].id){
-                            html += `<li data-id="${cookieArray[i].id}">
-                                        <img src="${this.json[j].images.small}" alt="">
-                                        <h3>${this.json[j].title}</h3>
-                                        <strong>${cookieArray[i].num}</strong>
-                                    </li>`;
-                            break;
-                        }
-                    }
+            // 如果没有商品;
+            if(hasGoods == false){
+                var goods = {
+                    id : goodsId,
+                    num : "1"
                 }
-                
-                $(".goods-list").html(html);
-            },
-            listSum:function(){
-                var cookie;
-                if(!(cookie = $.cookie("gwc"))){ 
-                    $(".gwc").find("span").html(0);
-                    return 0;
-                };
-                var cookieArray = JSON.parse(cookie);
-                var sum = 0;
-                for(var i = 0 ; i < cookieArray.length ; i ++){
-                    sum += Number(cookieArray[i].num);
+                cookieArray.push(goods);
+            }
+
+            // 将数组 转为字符串 方便 储存cookie;
+
+            // console.log(JSON.stringify(cookieArray));
+            $.cookie("shopCar",JSON.stringify(cookieArray));
+        }else{
+            $.cookie("shopCar",`[{"id":"${goodsId}","num":"1"}]`);
+        }
+        console.log($.cookie("shopCar"));
+        this.listSum();
+    },
+    showList:function(event){
+        // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
+        var target = event.target;
+
+        if(target != $(".empty")[0]) return 0;
+
+        var cookie;
+        if(!(cookie = $.cookie("shopCar"))){ return 0; };
+        var cookieArray = JSON.parse(cookie);
+
+        var html = "";
+        // for 购物车里有多少商品就拼接多少个;
+        for(var i = 0 ; i < cookieArray.length ; i ++){
+   
+            for(var j = 0 ; j < json.length ; j ++){
+                if(cookieArray[i].id == json[j].id){
+                    html += `<li data-id="${cookieArray[i].id}">
+                                <img src="${json[j].image}" alt="">
+                                <h3>${json[j].title}</h3>
+                                <strong>${cookieArray[i].num}</strong>
+                            </li>`;
+                    break;
                 }
-                $(".gwc").find("span").html(sum);
-            },
+            }
+        }
+        
+        $(".goods-list").html(html);
+    },
+    listSum:function(){
+        var cookie;
+        if(!(cookie = $.cookie("shopCar"))){ 
+            $(".gwc").find("span").html(0);
+            return 0;
+        };
+        var cookieArray = JSON.parse(cookie);
+        var sum = 0;
+        for(var i = 0 ; i < cookieArray.length ; i ++){
+            sum += Number(cookieArray[i].num);
+        }
+        $(".gwc").find("span").html(sum);
+    },
+   
     ifLoad(){
-       
+      
         var scrollTop = $("html,body").scrollTop();
         var clientHeight = $("html")[0].clientHeight;
         var lastBox = this.main.children(":last");
-       
+        // console.log(scrollTop,clientHeight,lastBox.offset());
         if(scrollTop + clientHeight > lastBox.offset().top){
-            
+            // 加载数据;
             if(this.loading){
                 return 0;
             }
             this.loading = true;
-          
+            // console.log("加载");
             this.page ++;
             this.loadJson()
             .done(function(res){
-              
                 this.renderPage(res);
             })
         }

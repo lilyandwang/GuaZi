@@ -1,8 +1,4 @@
-// $('input').eq(0).focus(function(){
-// 	if($(this).val().length==0){
-// 		$(this).parent().next("div").text("支持中文，字母，数字，'-','_'的多种组合");
-// 	}
-// })
+
 $('input').eq(0).focus(function(){
 	if($(this).val().length==0){
 		$(this).parent().next("div").text("验证完后，你可以使用该手机登录和找回密码");
@@ -24,23 +20,7 @@ $('input').eq(3).focus(function(){
 		$(this).parent().next().next("div").text("看不清？点击图片更换验证码");
 	}
 })
-	//用户名当失去焦点的时候
-// $('input').eq(0).blur(function(){
-// 	if($(this).val().length==0){
-// 		$(this).parent().next("div").text("");
-// 		$(this).parent().next("div").css("color",'#ccc');
-// 	}else if($(this).val().length>0 && $(this).val().length<4){
-// 		$(this).parent().next("div").text("长度只能在4-20个字符之间");
-// 		$(this).parent().next("div").css("color",'red');
-// 	}else if($(this).val().length>=4&& !isNaN($(this).val())){
-// 		$(this).parent().next("div").text("用户名不能为纯数字");
-// 		$(this).parent().next("div").css("color",'red');
-// 	}else{
-		
-// 		$(this).parent().next("div").text("");
-// 	}		
-// })
-	//设置密码失去焦点的时候
+
 $('input').eq(1).blur(function(){
 	if($(this).val().length==0){
 		$(this).parent().next("div").text("");
@@ -119,41 +99,13 @@ $("#submit_btn").click(function(e){
 	}
 	//如果勾选了
 	if($("#xieyi")[0].checked){	 
-
-		// var url = "http://localhost:8080/proxy/localhost/phpnow/guazi/php/login.php";
-		// ajaxPost(url,`phone=${$('phone').val()}&password=${$('password').val()}`)
-		// 	.then(function(res){
-		// 		console.log(res);
-		// })
-		// console.log("JS注册成功")
-		// function ajaxPost(url){
-		// 	return new Promise(function(success){
-			// var xhr = new XMLHttpRequest();
-		// 	xhr.open("POST",url);
-		// 	xhr.setRequestHeader("Content-Type",
-		// 	"application/x-www-form-urlencoded;charset=utf-8 ");
-		// 	xhr.send(`phone=${$('#phone').val()}&password=${$('#password').val()}`);	
-		// 	xhr.onload = function(){
-		// 		if(xhr.status == 200){
-		// 			// xhr.response;
-		// 			success(xhr.response)
-		// 		}
-		// 	}
-		// })
-		// }		
-		// ajaxPost("http://localhost:8080/proxy/localhost/phpnow/guazi/php/register.php")
-        // .then(function(res){
-        //     console.log(res);
-		// })
-		
-
 		$.ajax({
 			type: 'GET',
 			url:"http://localhost:8080/proxy/localhost/phpnow/guazi/php/register.php",
 			data:`phone=${$('#phone').val()}&password=${$('#password').val()}`,
 		 })
 		 .then(function(res){
-			// console.log(res);
+			console.log(res);
 			window.location.href = "http://localhost:8080/login.html";
 		})
 	}else{						

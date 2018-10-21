@@ -105,7 +105,7 @@ html, body {
   left: -260px;
   top: -80px; }
 
-#right-nav li:nth-child(3):hover div, #right-nav li:nth-child(5):hover div {
+#right-nav li:nth-child(3):hover div {
   left: -170px;
   top: -10px;
   padding: 10px 50px; }
@@ -114,6 +114,30 @@ html, body {
   left: -250px;
   top: -10px;
   padding: 10px 50px; }
+
+#right-nav li:nth-child(5) div {
+  left: -170px;
+  top: -10px;
+  padding: 10px 50px; }
+  #right-nav li:nth-child(5) div li {
+    width: 280px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5); }
+    #right-nav li:nth-child(5) div li img {
+      display: inline-block;
+      height: 60px;
+      float: left;
+      width: 40px; }
+    #right-nav li:nth-child(5) div li h3 {
+      float: left;
+      line-height: 60px;
+      padding-left: 10px; }
+    #right-nav li:nth-child(5) div li strong {
+      display: block;
+      float: left;
+      line-height: 60px;
+      padding: 0 5px;
+      color: yellowgreen; }
 
 /* ---------------head------------------ */
 /* 头部的nav */
@@ -493,7 +517,7 @@ html, body {
       float: left; }
 
 #waterfall {
-  width: 1220px;
+  width: 1230px;
   height: auto;
   margin: 0 auto; }
   #waterfall .box {
@@ -548,7 +572,7 @@ html, body {
           width: 50px; }
         #waterfall .box .tab-p div .span5 {
           display: block;
-          width: 66px;
+          width: 80px;
           height: 21px;
           background: #fcf2d5;
           font-size: 11px;

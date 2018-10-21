@@ -45,6 +45,7 @@ html,body{
   margin: auto;
 	height: 45px;
   width: 40px;
+
   &:nth-child(1) a{
     width: 15px;
     height: 15px;
@@ -120,7 +121,8 @@ html,body{
   left:-260px;
   top: -80px;
 }
-#right-nav li:nth-child(3):hover div,#right-nav li:nth-child(5):hover div{
+// ,#right-nav li:nth-child(5):hover div
+#right-nav li:nth-child(3):hover div{
   left:-170px;
   top: -10px;
   padding: 10px 50px;
@@ -130,6 +132,37 @@ html,body{
   top: -10px;
   padding: 10px 50px;
 }
+#right-nav li:nth-child(5) div{
+  left:-170px;
+  top: -10px;
+  padding: 10px 50px;
+    li{
+        width: 280px;
+        height: 60px;
+        background: rgba(0,0,0,.5);
+
+        img{
+            display: inline-block;
+            height: 60px;
+            float: left;
+            width: 40px;
+        }
+        h3{
+            float: left;
+            line-height: 60px;
+            padding-left: 10px;
+        }
+        strong{
+            display: block;
+            float: left;
+            line-height: 60px;
+            padding:0 5px;
+            color: yellowgreen;
+        }
+    }
+
+}
+
 /* ---------------head------------------ */
 /* 头部的nav */
 .kong{
@@ -589,7 +622,7 @@ html,body{
 
 // 瀑布流
 #waterfall{
-    width: 1220px;
+    width: 1230px;
     height: auto;
     margin:  0 auto;
     .box{
@@ -651,7 +684,7 @@ html,body{
               }
               .span5{
                 display: block;
-                width: 66px;
+                width: 80px;
                 height: 21px;
                 background: #fcf2d5;
                 font-size: 11px;
@@ -665,9 +698,9 @@ html,body{
             }
           }   
         
-        &:nth-child(4n){
+       &:nth-child(4n){
         margin-right: 0;
-      }
+      } 
     }
     
 }

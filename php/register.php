@@ -39,6 +39,5 @@
         die("数据库错误".mysql_error());
     }
     echo "注册成功" ;  
-    // echo '<META HTTP-EQUIV="Refresh" CONTENT="0; URL=http://localhost:8080/login.html">';
 
 ?>

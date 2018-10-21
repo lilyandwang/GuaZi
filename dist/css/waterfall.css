@@ -70,11 +70,12 @@ html, body {
     #right-nav li:nth-child(4) a:hover {
       background-position: 0 -96px; }
   #right-nav li:nth-child(5) a {
-    width: 15px;
-    height: 14px;
-    background-position: -48px -132px; }
+    display: block;
+    font-size: 13px;
+    color: #22ac38;
+    background: none; }
     #right-nav li:nth-child(5) a:hover {
-      background-position: 0 -132px; }
+      color: #f00; }
   #right-nav li .nav-hide {
     display: none;
     width: 15px;
@@ -114,30 +115,6 @@ html, body {
   left: -250px;
   top: -10px;
   padding: 10px 50px; }
-
-#right-nav li:nth-child(5) div {
-  left: -170px;
-  top: -10px;
-  padding: 10px 50px; }
-  #right-nav li:nth-child(5) div li {
-    width: 280px;
-    height: 60px;
-    background: rgba(0, 0, 0, 0.5); }
-    #right-nav li:nth-child(5) div li img {
-      display: inline-block;
-      height: 60px;
-      float: left;
-      width: 40px; }
-    #right-nav li:nth-child(5) div li h3 {
-      float: left;
-      line-height: 60px;
-      padding-left: 10px; }
-    #right-nav li:nth-child(5) div li strong {
-      display: block;
-      float: left;
-      line-height: 60px;
-      padding: 0 5px;
-      color: yellowgreen; }
 
 /* ---------------head------------------ */
 /* 头部的nav */

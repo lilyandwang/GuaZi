@@ -4,7 +4,7 @@ $.extend(WaterFall.prototype,{
         // 页数;
         this.page = 1;
         // 结构外包围;
-        this.main = $("#waterfall");
+        this.main = $("#waterfall ul");
         // 是否在加载中;
         this.loading = false;
 
@@ -31,19 +31,19 @@ $.extend(WaterFall.prototype,{
         // console.log(json);
         var html = "";
         for(var i = 0 ; i < json.length ; i ++){
-            html += `  <div class="box">
-                            <a href="http://localhost:8080/magnifier.html"><img src="${json[i].image}" alt=""></a>
+            html += `  <li class="box" data-guid="${json[i].id}">
+                            <a href="http://localhost:8080/magnifier.html"><img src="${json[i].image}" alt="" class="img"></a>
                             
                             <div class="tab-p">
-                                <span class="span1">大众 途观 2012款 1.8TSI 自动四驱风尚版</span>
+                                <span class="span1">${json[i].title}</span>
                                 <span class="span2">2012年 | 3.8万公里</span>
                                 <div>
-                                    <span class="span3">12.42万</span>
+                                    <span class="span3 price">${json[i].height}</span>
                                     <span class="span4">27.20万</span>
-                                    <span class="span5">加入购物车</span>
+                                    <button class="span5">加入购物车</button>
                                 </div>
                             </div>
-                       </div>
+                       </li>
                     `
         }
         this.main.html(this.main.html() + html);

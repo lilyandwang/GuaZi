@@ -26,9 +26,9 @@ $.extend(WaterFall.prototype,{
     },
     renderPage:function(json){
         // console.log(json);
-        var html1 = "";
+        var html = "";
         for(var i = 0 ; i < json.length ; i ++){
-            html1 += `  <div class="box">
+            html += `  <li class="box">
                             <a href="http://localhost:8080/magnifier.html"><img src="${json[i].image}" alt=""></a>
                             
                             <div class="tab-p">
@@ -40,25 +40,25 @@ $.extend(WaterFall.prototype,{
                                     <button class="span5" data-id=${json[i].id}>加入购物车</button>
                                 </div>
                             </div>
-                       </div>
+                       </li>
                     `
         }
-        this.main.html(this.main.html() + html1);
-        // this.sortPage();
+        // this.main.html(this.main.html() + html1);
+        this.main.html(html);
     },
     bindEvent:function(){
-        $("#waterfall .box").on("click","button",this.addCar.bind(this));
-        $(".empty").on("mouseenter",this.showList.bind(this));
-        $(".empty").on("mouseleave",function(){
+        $(".container ul").on("click","button",this.addCar.bind(this));
+        $(".shopCar>div").on("mouseenter",this.showList.bind(this));
+        $(".shopCar>div").on("mouseleave",function(){
             $(".goods-list").children().remove();
         });
-        $(".empty").on("click",function(event){
+        $(".shopCar>div").on("click",function(event){
             var target = event.target ; 
-            if(target != $(".empty")[0]) return 0;
+            if(target != $(".shopCar>div")[0]) return 0;
 
             $.removeCookie("shopCar");
             // 执行鼠标移出事件;
-            $(".empty").triggerHandler("mouseleave");
+            $(".shopCar>div").triggerHandler("mouseleave");
             this.listSum();
         }.bind(this));
         $(window).on("scroll",this.ifLoad.bind(this));
@@ -104,7 +104,7 @@ $.extend(WaterFall.prototype,{
         // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
         var target = event.target;
 
-        if(target != $(".empty")[0]) return 0;
+        if(target != $(".shopCar>div")[0]) return 0;
 
         var cookie;
         if(!(cookie = $.cookie("shopCar"))){ return 0; };
@@ -131,7 +131,7 @@ $.extend(WaterFall.prototype,{
     listSum:function(){
         var cookie;
         if(!(cookie = $.cookie("shopCar"))){ 
-            $(".gwc").find("span").html(0);
+            $(".shopCar").find("span").html(0);
             return 0;
         };
         var cookieArray = JSON.parse(cookie);
@@ -139,7 +139,7 @@ $.extend(WaterFall.prototype,{
         for(var i = 0 ; i < cookieArray.length ; i ++){
             sum += Number(cookieArray[i].num);
         }
-        $(".gwc").find("span").html(sum);
+        $(".shopCar").find("span").html(sum);
     },
    
     ifLoad(){

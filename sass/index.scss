@@ -1,4 +1,109 @@
-// /* 侧栏 */
+#active{
+  width: 558px;
+  height: 507px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: url(../img/first-bg.png) no-repeat left bottom;
+  z-index: 100;
+  .page-close{
+    border: none;
+    outline: none;
+    background: url(../img/first-close.png) no-repeat center;
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+  }
+  p{
+    &:first-of-type{
+      width: 440px;
+      height: 30px;
+      font-size: 26px;
+      line-height: 30px;
+      color: #fff;
+      margin: 50px 0 0 82px;
+    }
+    &:nth-of-type(2){
+      width: 146px;
+      height: 17px;
+      font-size: 14px;
+      line-height: 17px;
+      color: #fff;
+      margin: 14px 0 0 226px;
+    }
+    &:nth-of-type(3){
+      width: 203px;
+      height: 58px;
+      font-size: 20px;
+      line-height: 58px;
+      text-align: center;
+      color: #901727;
+      background: #fff4a2;
+      box-shadow: 2px 4px 4px #bf0c05;
+      border-radius: 7px;
+      margin: 30px 0 0 198px;
+    }
+  }
+  .page-calculator{
+    width: 203px;
+    height: 159px;
+    margin: 36px 0 0 175px;
+    background: #373737;
+    box-shadow: 0 0 4px 4px #c52031;
+    padding: 25px;
+    .calculator1{
+      width: 203px;
+      height: 36px;
+      border-bottom: 1px solid #5b5b5b;
+      p{
+        font-size: 11px;
+        color: #fff;
+        float: left;
+        margin: 0;
+        width: auto;
+        height: 12px;
+        line-height: 12px;
+      }
+      span{
+        font-size: 23px;
+        color:#fff;
+        float: right;
+        display: block;
+      }
+    }
+    .calculator2{
+      width: 191px;
+      height: 125px;
+      padding-top: 5px;
+      padding-left: 10px;
+      li{
+        width: 20px;
+        height: 11px;
+        float: left;
+        font-size: 12px;
+        line-height: 12px;
+        margin-right: 35px;
+        margin-top: 13px;
+        color: #9b9b9b;
+        &:nth-of-type(4n){
+          margin-right: 0;
+        }
+      }
+      .symbol1{
+          color: #fff;
+      }
+      .symbol2{
+        color: #9b5353;
+       }
+    }
+  }
+}
+// 侧栏
 #right-nav{
 	width:40px;
 	height: 100%;

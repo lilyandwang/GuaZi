@@ -13,6 +13,50 @@
    
 </head>
 <body>
+    <!-- 活动页 -->
+<div id="active">
+    <button class="page-close"></button>
+    <p>贷款购车大让利，费率最高八折优惠</p>
+    <p>快来测测你能贷多少</p>
+    <p>测测你的身价</p>
+    <div class="page-calculator">
+        <div class="calculator1">
+            <p> 您的身价为 ：</p><span>500 , 000</span>
+        </div>
+        <div class="calculator2">
+            <li class="symbol1">c</li>
+            <li class="symbol1">+/-</li>
+            <li class="symbol1">%</li>
+            <li class="symbol2">/</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li class="symbol2">x</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li class="symbol2">-</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li class="symbol2">+</li>
+            <li>00</li>
+            <li>0</li>
+            <li>,</li>
+            <li class="symbol2">=</li>
+        </div>
+    </div>
+</div>
+<script>
+var timer = setTimeout(function(){
+    active.style.display = "none";
+},3000)
+var btn = document.querySelector(".page-close");
+btn.onclick = function(){
+    clearTimeout(timer);
+    active.style.display = "none";
+}
+</script>
     <!-- 右侧固定导航 -->
 <div id="right-nav">
     <div class="w">
